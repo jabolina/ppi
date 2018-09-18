@@ -1,0 +1,2 @@
+Esse folder é a raiz do projeto, de onde serão criadas todas nossas páginas.
+

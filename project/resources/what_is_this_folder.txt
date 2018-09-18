@@ -1,0 +1,2 @@
+Esse folder deve manter tudo que for considerados "resources" para o codigo do projeto. 
+Como, por exemplo, configurações, bibliotecas de terceiros e nossas proprias bibliotecas.
