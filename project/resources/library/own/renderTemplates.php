@@ -14,8 +14,6 @@
 
         require_once(TEMPLATES_PATH . "/header.php");
 
-        echo "<div id=\"container-fluid\">";
-
         require_once(TEMPLATES_PATH . "/sidebar.php");
 
         echo "<div id=\"content\">";
@@ -26,7 +24,7 @@
             require_once(TEMPLATES_PATH . "/error.php");
         }
 
-        echo "</div></div>";
+        echo "</div>";
 
         require_once(TEMPLATES_PATH . "/footer.php");
     }
