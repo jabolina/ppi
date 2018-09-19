@@ -20,6 +20,10 @@ Vou deixar uma sessão de README ao fim, para que cada um de nós fale o que est
 fazendo no momento, pra ficar tipo um kanbam, ao fim da atividade coloque
 na área de finalizado.
 
+Acho que uma coisa boa seria cada um fazer seu código em branches separadas. Quando terminar 
+a atividade que estiver fazendo abre o pull request e adiciona os outros como reviewer.
+Assim não corre perigo de a master estragar também.
+
 ### Kanbam:
 
 #### Precisa ser feito:
