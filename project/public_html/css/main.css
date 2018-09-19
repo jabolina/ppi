@@ -5,10 +5,34 @@
     z-index: 999;
 }
 
-.darkblue {
-    background: #1D1B63;
+/*
+ * Color palette
+ */
+.background-bubbles {
+    background: #EAFAF9;
+    color: #1b1e21;
+}
+
+.background-coral {
+    background: #FE854F;
+    color: #1b1e21;
+}
+
+.background-blue-green {
+    background: #30D0C6;
+    color: #1b1e21;
+}
+
+.background-liberty {
+    background: #5755A1;
     color: #eeeeee;
 }
+
+.background-slate-blue {
+    background: #474380;
+    color: #eeeeee;
+}
+
 
 /*
  * Sidebar
@@ -44,12 +68,12 @@
 }
 
 .sidebar .nav-link.active {
-    color: #007bff;
+    color: inherit;
 }
 
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-    color: inherit;
+.sidebar span:hover {
+    cursor: pointer;
+    color: #bbb !important;
 }
 
 .sidebar-heading {

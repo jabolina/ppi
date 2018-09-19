@@ -5,8 +5,12 @@ Just a repository for class assignments.
 ### Road:
 
 - [X] Estrutura do projeto
-- [ ] Arquivos fixos de cabeçalho, rodapé e lateral
+- [ ] Paleta de cores
+- [X] Arquivos fixos de cabeçalho, rodapé e lateral
+    - [ ] Cores de acordo com a paleta
 - [ ] Páginas dos clientes
+- [ ] Páginas com acesso restrito
+- [ ] Fazer as páginas ficarem bonitas
 - [ ] Entrega 1 dia 26/09(siga as [requisições](https://github.com/jabolina/ppi/blob/master/assignment.pdf))
 - [ ] ...
 
@@ -18,14 +22,24 @@ na área de finalizado.
 
 ### Kanbam:
 
+#### Precisa ser feito:
+
+```
+Algumas classes de css genéricas pra deixar as coisas fofinhas *-*
+
+```
+
 #### Fazendo:
 
 ```
-(GUTO): arquivos fixos para o layout.
 
 ```
 
 ---
 
 #### Pronto:
-:(
+
+```
+(GUTO): arquivos fixos para o layout.
+
+```
