@@ -4,11 +4,9 @@
 /*
         Default styles
  */
-
 body {
-    padding-top: 50px;
     font-family: 'Poppins', sans-serif;
-    color: #1b1e21;
+    background: #fafafa;
 }
 
 p {
@@ -16,73 +14,63 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
+    color: #999;
 }
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
 }
 
-ul ul a {
-    font-size: 0.9em;
-    padding-left: 30px !important;
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 15px;
+    right: 0;
 }
 
-a[data-toggle="collapse"] {
-    position: relative;
+#content.active {
+    width: 100%;
 }
-
 
 /*
-        Navbar
+        Sidebar
  */
-nav {
-    z-index: 999;
-}
-
-nav li {
-    text-decoration: none;
-}
-
-nav li:hover {
-    cursor: pointer;
-    color: inherit;
-    text-decoration: none;
-}
-
-
-/*
- *      Sidebar
- */
-@media (max-width: 910px) {
-    .sidebar {
-        margin-left: -250px;
-    }
-    .sidebar.active {
-        margin-left: 0;
-    }
-}
 
 .wrapper {
     display: flex;
     width: 100%;
-    padding: 1.5em 0 0;
-}
-
-.row {
-    width: 100%
 }
 
 .sidebar {
+    width: 15em;
     position: fixed;
-    padding-top: 1em;
-    top: 3em;
+    top: 50px;
     left: 0;
     height: 100vh;
     z-index: 950;
-    border: 1px solid #c4ced6;
+    border-right: 1px solid #999999;
     transition: all 0.3s;
+}
+
+.sidebar.active {
+    margin-left: -250px;
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #999999;
+}
+
+.sidebar ul p {
+    color: #fff;
+    padding: 10px;
 }
 
 .sidebar ul li a {
@@ -90,18 +78,19 @@ nav li:hover {
     font-size: 1.1em;
     display: block;
 }
+
 .sidebar ul li a:hover {
-    color: #4e555b;
+    color: #435061;
     background: inherit;
 }
 
-.sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #6d7fcc;
+.sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: rgba(86, 86, 86, 1);
 }
 
-.sidebar .components {
-    padding: 1em 0;
-    border-bottom: 1px solid #c4ced6;
+a[data-toggle="collapse"] {
+    position: relative;
 }
 
 .dropdown-toggle::after {
@@ -112,6 +101,30 @@ nav li:hover {
     transform: translateY(-50%);
 }
 
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+    .content {
+        width: 100%;
+    }
+    .content.active {
+        width: calc(100% - 250px);
+    }
+    .sidebarCollapse span {
+        display: none;
+    }
+}
+
+
 /*
     Footer
  */
@@ -120,4 +133,23 @@ nav li:hover {
     width: 100%;
     bottom: 0;
     z-index: 900;
+}
+
+
+/*
+        Home page
+ */
+.home-header {
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    background: url('http://placehold.it/1707x400') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.card {
+    height: 100%;
 }

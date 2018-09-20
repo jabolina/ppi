@@ -9,6 +9,7 @@ function toggleSidebar(action) {
 
         $('#sidebarDisplay').toggle('fast', function () {
             sessionStorage.setItem('sidebar', 'show');
+            $('#sidebarDisplay').fadeOut('fast');
             $('#sidebarMenu').fadeIn('fast');
         });
 }
