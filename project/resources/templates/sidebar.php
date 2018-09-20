@@ -62,7 +62,7 @@
             </a>
         </nav>
 
-        <div id="sidebarDisplay" style="display: none; left: 2em;">
+        <div class="col-1" id="sidebarDisplay" style="display: none; left: 2em;">
             <div class="btn background-lazuli">
                 <i class="fas fa-bars"></i>
                 Menu
