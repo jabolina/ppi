@@ -1,5 +1,5 @@
 function toggleSidebar(action) {
-    action === 'hide' ?
+    /*action === 'hide' ?
         $('#sidebarMenu').fadeOut('fast', function () {
             sessionStorage.setItem('sidebar', 'hide');
             $('#sidebarDisplay').toggle('fast');
@@ -11,7 +11,7 @@ function toggleSidebar(action) {
             sessionStorage.setItem('sidebar', 'show');
             $('#sidebarDisplay').fadeOut('fast');
             $('#sidebarMenu').fadeIn('fast');
-        });
+        });*/
 }
 
 $(document).ready(function () {
