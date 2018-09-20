@@ -57,12 +57,12 @@
                     </ul>
                 </li>
             </ul>
-            <a id="sidebarHidden">
+            <a id="sidebarHidden" onclick="toggleSidebar('hide')">
                 <i class="fas fa-eye-slash fixed-bottom" style="z-index: 999;padding: 1em"></i>
             </a>
         </nav>
 
-        <div class="col-1" id="sidebarDisplay" style="display: none; left: 2em;">
+        <div class="col-1" id="sidebarDisplay" style="display: none; left: 2em;" onclick="toggleSidebar('show')">
             <div class="btn background-lazuli">
                 <i class="fas fa-bars"></i>
                 Menu

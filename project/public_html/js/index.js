@@ -1,20 +1,26 @@
-$(document).ready(function () {
-    /**
-     * Hide side bar menu and display button
-     */
-    $('#sidebarHidden').on('click', function () {
+function toggleSidebar(action) {
+    action === 'hide' ?
         $('#sidebarMenu').fadeOut('fast', function () {
+            sessionStorage.setItem('sidebar', 'hide');
             $('#sidebarDisplay').toggle('fast');
+        })
+
+        :
+
+        $('#sidebarDisplay').toggle('fast', function () {
+            sessionStorage.setItem('sidebar', 'show');
+            $('#sidebarMenu').fadeIn('fast');
         });
-    });
+}
+
+$(document).ready(function () {
 
     /**
-     * Hide button and display side bar menu
+     * Verify side bar previous state and set it on page reload
      */
-    $('#sidebarDisplay').on('click', function () {
-       $('#sidebarDisplay').toggle('fast', function () {
-           $('#sidebarMenu').fadeIn('fast');
-       });
-    });
+    (function () {
+        sessionStorage.getItem('sidebar') ?
+            toggleSidebar(sessionStorage.getItem('sidebar')) : null;
+    })();
 });
 
