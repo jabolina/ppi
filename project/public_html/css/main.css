@@ -1,11 +1,41 @@
 @import "palette.css";
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+
+/*
+        Default styles
+ */
 
 body {
     padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: #1b1e21;
 }
 
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+ul ul a {
+    font-size: 0.9em;
+    padding-left: 30px !important;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+
 /*
-    Navbar
+        Navbar
  */
 nav {
     z-index: 999;
@@ -23,52 +53,64 @@ nav li:hover {
 
 
 /*
- * Sidebar
+ *      Sidebar
  */
+@media (max-width: 910px) {
+    .sidebar {
+        margin-left: -250px;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    padding: 1.5em 0 0 1.5em;
+}
+
+.row {
+    width: 100%
+}
 
 .sidebar {
     position: fixed;
-    top: 0;
-    bottom: 0;
+    padding-top: 1em;
+    top: 3em;
     left: 0;
-    z-index: 900;
-    padding: 0;
+    height: 100vh;
+    z-index: 950;
+    border: 1px solid #c4ced6;
+    transition: all 0.3s;
 }
 
-.sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 4em;
-    height: calc(100vh - 48px);
-    padding-top: .5rem;
-    overflow-x: hidden;
-    overflow-y: auto;
+.sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+.sidebar ul li a:hover {
+    color: #4e555b;
+    background: inherit;
 }
 
-.sidebar .nav-link {
-    font-weight: 500;
-    color: #333;
+.sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #6d7fcc;
 }
 
-.sidebar .nav-link .feather {
-    margin-right: 4px;
-    color: #999;
+.sidebar .components {
+    padding: 1em 0;
+    border-bottom: 1px solid #c4ced6;
 }
 
-.sidebar .nav-link.active {
-    color: inherit;
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
 }
-
-.sidebar span:hover {
-    cursor: pointer;
-    color: #bbb !important;
-}
-
-.sidebar-heading {
-    font-size: .75rem;
-    text-transform: uppercase;
-}
-
 
 /*
     Footer
@@ -77,5 +119,5 @@ nav li:hover {
     position: absolute;
     width: 100%;
     bottom: 0;
-    z-index: 999;
+    z-index: 900;
 }
