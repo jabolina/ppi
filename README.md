@@ -2,7 +2,13 @@
 ---
 Just a repository for class assignments.
 
+### Importante:
+---
+Quando clonar o repositório já rode o script ```run_this.sh```, para todos seguirmos um padrão de commit e pr.
+
+
 ### Road:
+---
 
 - [X] Estrutura do projeto
 - [ ] Paleta de cores

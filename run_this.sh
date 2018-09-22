@@ -18,4 +18,3 @@ else
     chmod +x ${FILE_PATH}
     echo "Done.";
 fi
-
