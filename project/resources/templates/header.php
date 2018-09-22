@@ -10,7 +10,7 @@
 
 <nav id="header" class="navbar navbar-expand-lg fixed-top background-lazuli">
     <div class="container-fluid">
-        <a class="navbar-brand" href="?page=home.php">
+        <a class="navbar-brand" href="index.php?template=home.png">
             <img src="<?php echo IMAGES_PATH . '/layout/transparent-logo.png' ?>" alt="VJV Medical Center">
         </a>
 

@@ -27,7 +27,23 @@
 <body>
     <div class="wrapper">
         <?php
-        renderLayoutWithContent("home.php");
+        /**
+         * TODO (Guto): fix workaroung
+         *
+         *      Um sistema de rotas bem mais ou menos, como é necessário que uma página esteja em public_html
+         * para ser carregada e nossos templates estão fora, quando quiser carregar algum template, chamamos a
+         * index.php e passamos pela URL qual o template queremos carregar efetivamente, chamamos assim:
+         *
+         *          href="index.php?template=home.php
+         *
+         * Assim, o template home.php será renderizado, juntamente com o navbar, sidebar e rodapé.
+         */
+
+            if (isset($_GET['template'])) {
+                renderLayoutWithContent($_GET['template']);
+            } else {
+                renderLayoutWithContent('home.php');
+            }
         ?>
     </div>
 </body>
