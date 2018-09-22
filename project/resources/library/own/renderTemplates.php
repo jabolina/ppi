@@ -14,17 +14,10 @@
 
         require_once(TEMPLATES_PATH . "/header.php");
 
-        echo "<div id=\"content\">";
+        echo "<div id='content' class='vjv-content'>";
 
         require_once(TEMPLATES_PATH . "/sidebar.php");
-/*
-        echo '<div class="col-1" id="sidebarDisplay" style="display:none;padding:1.5em;" onclick="toggleSidebar(\'show\')">' .
-             '    <div class="btn background-lazuli">' .
-             '        <i class="fas fa-bars"></i>' .
-             '            Menu' .
-             '    </div>'.
-             '</div>';
-*/
+
         if (file_exists($contentFilePath)) {
             require_once ($contentFilePath);
         } else {
