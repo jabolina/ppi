@@ -7,7 +7,7 @@
  * Configurações como credenciais do banco de dados, caminho para arquivos, etc.
  */
 
-$config=array(
+$config= array(
     "db"=> array(
         "name"=> "ppi",
         "username"=> "root",
@@ -15,14 +15,7 @@ $config=array(
         "host"=> "127.0.0.1",
         "port"=> 3306
     ),
-    "baseURL"=> "localhost",
-    "paths"=> array(
-        "resources"=> realpath(dirname(__FILE__)),
-        "images"=> array(
-            "content"=> $_SERVER["DOCUMENT_ROOT"] . "/images/content/",
-            "layout"=> $_SERVER["DOCUMENT_ROOT"] . "/images/layout/"
-        )
-    )
+    "baseURL"=> "localhost"
 );
 
 defined("LIBRARY_PATH")
@@ -30,6 +23,9 @@ defined("LIBRARY_PATH")
 
 defined("TEMPLATES_PATH")
     or define("TEMPLATES_PATH", realpath(dirname(__FILE__) . '/templates'));
+
+defined("IMAGES_PATH")
+    or define("IMAGES_PATH", realpath(dirname(__FILE__) . '/../public_html/img'));
 
 ini_set("error_reporting", "true");
 error_reporting(E_ALL|E_STRICT);
