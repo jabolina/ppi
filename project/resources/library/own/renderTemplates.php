@@ -14,11 +14,9 @@
 
         require_once(TEMPLATES_PATH . "/header.php");
 
-        echo "<div id=\"container-fluid\">";
+        echo "<div id='content' class='vjv-content'>";
 
         require_once(TEMPLATES_PATH . "/sidebar.php");
-
-        echo "<div id=\"content\">";
 
         if (file_exists($contentFilePath)) {
             require_once ($contentFilePath);
@@ -26,7 +24,7 @@
             require_once(TEMPLATES_PATH . "/error.php");
         }
 
-        echo "</div></div>";
+        echo "</div>";
 
         require_once(TEMPLATES_PATH . "/footer.php");
     }
