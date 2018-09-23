@@ -10,20 +10,17 @@ help:
 	@echo "-----------------------------------------------------------------------"
 
 update:
-	branch = git rev-parse --abbrev-ref HEAD
-
-	@echo "Stashing your changes"
+	$(eval BRANCH=$(shell sh -c "git rev-parse --abbrev-ref HEAD"))
+	@echo "Stashing changes for branch $(BRANCH)"
 	git stash
+
 	git checkout master
-
-	@echo "Changing to master"
 	git pull
-	git checkout $(branch)
 
-	@echo "Merging master into ${branch}"
+	@echo "Checkout to $(BRANCH)"
+	git checkout $(BRANCH)
+
 	git merge master
-
-	@echo "Applying stashed differences"
 	git stash apply
 
 lock:
