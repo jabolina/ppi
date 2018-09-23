@@ -27,17 +27,19 @@ a:focus {
 
 .vjv-content {
     overflow-y: scroll;
-    width: calc(100% - 250px);
-    padding: 40px;
+    width: calc(100% - 9.375em);
+    padding: 2.5em;
     max-height: 100vh;
     transition: all 0.3s;
     position: absolute;
-    top: 15px;
+    top: 1.2em;
     right: 0;
 }
 
-.vjv-content.active {
-    width: 100%;
+@media (max-width: 600px) {
+    .vjv-content {
+        width: 100%;
+    }
 }
 
 /*
