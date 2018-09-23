@@ -14,12 +14,60 @@
             <img src="<?php echo IMAGES_PATH . '/layout/transparent-logo.png' ?>" alt="VJV Medical Center">
         </a>
 
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    Login
-                </li>
-            </ul>
+        <div class="nav-item dropdown hide-until">
+            <a class="nav-link dropdown" href="#"
+               id="hiddenMenu" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+
+                Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="hiddenMenu">
+                <a href="index.php?template=home.php" class="dropdown-item">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-file-signature"></i>
+                    Agendamento
+                </a>
+
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-camera"></i>
+                    Galeria
+                </a>
+
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-comments"></i>
+                    Fale conosco
+                </a>
+
+                <hr>
+
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-user-plus"></i>
+                    Cadastro
+                </a>
+
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-list-ul"></i>
+                    Listagem:
+                </a>
+                <hr>
+                <a href="#" class="dropdown-item">
+                    <a class="dropdown-item" href="#">Funcionários</a>
+                    <a class="dropdown-item" href="#">Agendamentos</a>
+                    <a class="dropdown-item" href="#">Contatos</a>
+                </a>
+                <hr>
+            </div>
         </div>
+
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item active">
+                Login
+            </li>
+        </ul>
+
     </div>
 </nav>

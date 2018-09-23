@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-sm-7">
             <h2 class="mt-4">

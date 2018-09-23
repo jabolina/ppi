@@ -27,7 +27,7 @@ a:focus {
 
 .vjv-content {
     overflow-y: scroll;
-    width: calc(100% - 9.375em);
+    width: calc(100% - 15.375em);
     padding: 2.5em;
     max-height: 100vh;
     transition: all 0.3s;
@@ -36,9 +36,17 @@ a:focus {
     right: 0;
 }
 
-@media (max-width: 600px) {
+.hide-until {
+    display: none;
+}
+
+@media (max-width: 768px) {
     .vjv-content {
         width: 100%;
+    }
+
+    .hide-until {
+        display: flex !important;
     }
 }
 
