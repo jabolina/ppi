@@ -17,7 +17,7 @@ Quando clonar o repositório já rode o script ```run_this.sh```, para todos seg
 - [ ] Páginas dos clientes
 - [ ] Páginas com acesso restrito
 - [ ] Fazer as páginas ficarem bonitas
-- [ ] Entrega 1 dia 26/09(siga as [requisições](https://github.com/jabolina/ppi/blob/master/assignment.pdf))
+- [ ] Entrega 1 dia 26/09(siga as [requisições](https://github.com/jabolina/ppi/blob/master/documentation/assignment.pdf))
 - [ ] ...
 
 ### Contribuindo:
