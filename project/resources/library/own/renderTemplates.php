@@ -29,3 +29,13 @@
         require_once(TEMPLATES_PATH . "/footer.php");
     }
 
+    function renderLayoutWithoutContent ($contentFile) {
+        $contentFilePath = TEMPLATES_PATH . "/" . $contentFile;
+
+        if (file_exists($contentFilePath)) {
+            require_once ($contentFilePath);
+        } else {
+            require_once(TEMPLATES_PATH . "/error.php");
+        }
+    }
+

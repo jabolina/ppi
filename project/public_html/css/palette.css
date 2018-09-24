@@ -1,24 +1,29 @@
-.background-lazuli {
-    background: rgba(51, 102, 153, 1);
+.background-liberty {
+    background-color: #5755A1;
     color: rgba(255, 255, 250, 1);
 }
 
-.background-davy {
-    background: rgba(86, 86, 86, 1);
-    color: rgba(255, 255, 250, 1);
+.background-blue-green {
+    background-color: #30d0c6;
+    color: rgba(86, 86, 86, 1);
 }
 
 .background-slate {
-    background: rgba(47, 72, 88, 1);
+    background-color: #474380;
     color: rgba(255, 255, 250, 1);
 }
 
-.background-gunmetal {
-    background: rgba(43, 48, 58, 1);
+.background-coral {
+    background-color: #fe854f;
     color: rgba(255, 255, 250, 1);
 }
 
-.background-powder {
-    background: rgba(255, 255, 250, 1);
+.background-bubbles {
+    background-color: #eafaf9;
     color: rgba(43, 48, 58, 1);
+}
+
+.background-white {
+    background-color: #fefefe;
+    color: rgba(86, 86, 86, 1);
 }

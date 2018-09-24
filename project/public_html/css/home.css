@@ -1,0 +1,13 @@
+/*
+        Home page
+ */
+.home-header {
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    background: url('../img/content/home-background.png') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

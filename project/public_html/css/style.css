@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800 | Roboto |Work+Sans:400,600");
+
+@media (max-width: 992px) {
+    .container {
+        width: 90% !important;
+        grid-template-areas:
+                'about'
+                'btns'
+                'typo'
+                'color'
+                'forms' !important;
+    }
+}
+
+body {
+    font-family: 'Work sans', sans-serif;
+    color: #555;
+}
+
+p, .name, .code{
+    font-size: 13px;
+}
+
+.code{
+    text-transform: lowercase;
+}
+
+.text-example{
+    font-size: 15px;
+}
+
+.container {
+    width: 992px;
+    margin: 100px auto;
+    text-align: justify;
+    display: grid;
+    grid-template-areas:
+            'about  about'
+            'color  typo'
+            'btns   typo'
+            'forms  forms';
+    grid-gap: 50px;
+}
+
+#about {
+    grid-area: about;
+}
+
+#color {
+    grid-area: color;
+}
+
+#typo {
+    grid-area: typo;
+}
+
+#btns {
+    grid-area: btns;
+}
+
+#forms {
+    grid-area: forms;
+}
+
+.title-section {
+    padding: 20px 0;
+
+}
+
+.circle-1 {
+    background-color: #474380;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.circle-2 {
+    background-color: #5755A1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.circle-3 {
+    background-color: #30d0c6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.circle-4 {
+    background-color: #fe854f;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.circle-5 {
+    background-color: #eafaf9;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+}
+
+.circle-6 {
+    background-color: #fefefe;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+}
+
+.color-name {
+    margin: 25px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    grid-gap: 30px;
+}
+
+.code {
+    font-style: italic;
+    color: #aaa;
+}
+
+.font-body {
+    color: #474380;
+    text-transform: none !important;
+}
+
+h1, h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800 !important;
+}
+
+h3, h4, h5{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-body p {
+    color: #aaa;
+}
+
+.text-example {
+    text-transform: none;
+    color: #343434 !important;
+}
+
+.title-section {
+    border-bottom: 3px solid #aaa;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #aaa;
+    padding: 15px 0;
+    margin: 15px 0;
+    letter-spacing: 2px;
+}
+
+.body-section {}
+
+.color-name .name{
+    font-weight: 800;
+}
+
+.btn{
+    width: 150px;
+    margin: 10px;
+    color: white;
+    border-radius: 3px;
+    height: 40px;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn-orange{
+    background: #fe854f;
+}
+
+.btn-green{
+    background: #30d0c6;
+}
+
+.btn-purple{
+    background: #474380;
+}
+
+.form-group{
+    padding: 15px;
+}
+
+.form-group>*{
+    display: block;
+    margin: 8px;
+}
+
+.style-forms .body-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+
+input[type = text], input[type = email], input[type = password], input[type = number], input[type = date] {
+    border: none;
+    border-bottom: 1px solid #474380;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    padding: 2px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #474380;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #eee;
+}
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #474380;
+}
+
+textarea::-webkit-scrollbar-track{
+    background-color: #eee;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+*::placeholder{
+    font-style: italic;
+}
+
+label{
+    font-weight: 800;
+    font-size: 15px;
+}
+
+textarea{
+    width: 80%;
+    height: 100px;
+    resize: none;
+    border: 1px solid #474380;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+}
+
+select{
+    width: 100%;
+    height: 35px;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #474380;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 3px;
+}
+
+fieldset{
+    border: 1px solid #474380;
+    border-radius: 3px;
+}
+
+fieldset label{
+    font-weight: 400;
+}
+
+legend{
+    font-weight: 600;
+}

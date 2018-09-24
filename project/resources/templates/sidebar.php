@@ -1,4 +1,4 @@
-<nav id="sidebar" class="col-2 sidebar background-powder">
+<nav id="sidebar" class="col-2 sidebar background-white">
     <ul class="list-unstyled components">
         <li class="active">
             <a href="#">
@@ -15,14 +15,14 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="index.php?template=gallery.php">
                 <i class="fas fa-camera"></i>
                 Galeria
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="index.php?template=contact.php">
                 <i class="fas fa-comments"></i>
                 Fale conosco
             </a>
@@ -31,7 +31,7 @@
 
     <ul class="list-unstyled components">
         <li>
-            <a href="#">
+            <a href="index.php?template=register-root.php">
                 <i class="fas fa-user-plus"></i>
                 Cadastro
             </a>
