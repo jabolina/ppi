@@ -22,7 +22,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="index.php?template=contact.php">
                 <i class="fas fa-comments"></i>
                 Fale conosco
             </a>

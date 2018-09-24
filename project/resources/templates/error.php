@@ -13,7 +13,7 @@
                     Home
                 </a>
 
-                <a role="button" href="http://www.jquery2dotnet.com" class="btn btn-green btn-lg">
+                <a role="button" href="index.php?template=home.php" class="btn btn-green btn-lg">
                     <i class="fas fa-comments"></i>
                     Fale conosco
                 </a>

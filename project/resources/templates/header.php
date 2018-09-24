@@ -37,7 +37,7 @@
                     Galeria
                 </a>
 
-                <a href="#" class="dropdown-item">
+                <a href="index.php?template=contact.php" class="dropdown-item">
                     <i class="fas fa-comments"></i>
                     Fale conosco
                 </a>
