@@ -31,7 +31,7 @@
 
     <ul class="list-unstyled components">
         <li>
-            <a href="#">
+            <a href="index.php?template=register-root.php">
                 <i class="fas fa-user-plus"></i>
                 Cadastro
             </a>

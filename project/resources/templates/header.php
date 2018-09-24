@@ -1,8 +1,3 @@
-<?php
-    require_once (realpath(dirname(__FILE__)) . "/../configuration.php");
-    require_once (LIBRARY_PATH . '/own/renderTemplates.php');
-?>
-
 <nav id="header" class="navbar navbar-expand-lg fixed-top background-slate">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php?template=home.php">
@@ -39,7 +34,7 @@
 
                 <hr>
 
-                <a href="#" class="dropdown-item">
+                <a href="index.php?template=register-root.php" class="dropdown-item">
                     <i class="fas fa-user-plus"></i>
                     Cadastro
                 </a>
