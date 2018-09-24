@@ -11,12 +11,22 @@ Quando clonar o repositório já rode o script ```run_this.sh```, para todos seg
 ---
 
 - [X] Estrutura do projeto
-- [ ] Paleta de cores
+- [X] Paleta de cores
 - [X] Arquivos fixos de cabeçalho, rodapé e lateral
-    - [ ] Cores de acordo com a paleta
+    - [X] Cores de acordo com a paleta
 - [ ] Páginas dos clientes
+    - [X] Home
+    - [X] Galeria
+    - [X] Contato
+    - [ ] Agendamento
+    - [X] Login
 - [ ] Páginas com acesso restrito
-- [ ] Fazer as páginas ficarem bonitas
+    - [X] Cadastro
+    - [ ] Listagem
+        - [X] Funcionarios
+        - [X] Contatos
+        - [ ] Agendamento
+- [X] Fazer as páginas ficarem bonitas
 - [ ] Entrega 1 dia 26/09(siga as [requisições](https://github.com/jabolina/ppi/blob/master/documentation/assignment.pdf))
 - [ ] ...
 
@@ -35,7 +45,7 @@ Assim não corre perigo de a master estragar também.
 #### Precisa ser feito:
 
 ```
-Algumas classes de css genéricas pra deixar as coisas fofinhas *-*
+Tá no road, pô
 
 ```
 
@@ -45,11 +55,9 @@ Algumas classes de css genéricas pra deixar as coisas fofinhas *-*
 
 ```
 
----
-
 #### Pronto:
 
 ```
-(GUTO): arquivos fixos para o layout.
+Tá marcado no road, pô
 
 ```

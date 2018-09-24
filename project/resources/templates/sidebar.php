@@ -1,7 +1,7 @@
 <nav id="sidebar" class="col-2 sidebar background-white">
     <ul class="list-unstyled components">
         <li class="active">
-            <a href="#">
+            <a href="index.php?template=home.php">
                 <i class="fas fa-home"></i>
                 Home
             </a>
@@ -44,13 +44,13 @@
             </a>
             <ul class="collapse list-unstyled" id="listings">
                 <li>
-                    <a href="#">Funcionários</a>
+                    <a href="index.php?template=listings/list-employees.php">Funcionários</a>
                 </li>
                 <li>
                     <a href="#">Agendamentos</a>
                 </li>
                 <li>
-                    <a href="#">Contatos</a>
+                    <a href="index.php?template=listings/list-contacts.php">Contatos</a>
                 </li>
             </ul>
         </li>
