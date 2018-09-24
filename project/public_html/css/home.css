@@ -1,0 +1,13 @@
+/*
+        Home page
+ */
+.home-header {
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    background: url('http://placehold.it/1707x400') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
