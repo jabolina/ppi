@@ -1,4 +1,5 @@
 @import "palette.css";
+@import "style.css";
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
 /*
@@ -27,12 +28,13 @@ a:focus {
 
 .vjv-content {
     overflow-y: scroll;
-    width: calc(100% - 15.375em);
+    width: calc(100% - 15.075em);
+    height: calc(100% - 4.795em);
     padding: 2.5em;
     max-height: 100vh;
     transition: all 0.3s;
     position: absolute;
-    top: 1.2em;
+    top: 2em;
     right: 0;
 }
 

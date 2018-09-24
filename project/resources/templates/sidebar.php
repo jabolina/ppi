@@ -1,4 +1,4 @@
-<nav id="sidebar" class="col-2 sidebar background-powder">
+<nav id="sidebar" class="col-2 sidebar background-white">
     <ul class="list-unstyled components">
         <li class="active">
             <a href="#">
