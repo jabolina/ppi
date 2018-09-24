@@ -15,7 +15,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="index.php?template=gallery.php">
                 <i class="fas fa-camera"></i>
                 Galeria
             </a>

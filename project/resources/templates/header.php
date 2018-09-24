@@ -27,7 +27,7 @@
                     Agendamento
                 </a>
 
-                <a href="#" class="dropdown-item">
+                <a href="index.php?template=gallery.php" class="dropdown-item">
                     <i class="fas fa-camera"></i>
                     Galeria
                 </a>

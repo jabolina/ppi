@@ -1,8 +1,12 @@
 @import "palette.css";
 @import "style.css";
+
 @import "sidebar.css";
-@import "home.css";
+@import "footer.css";
 @import "error.css";
+
+@import "home.css";
+@import "gallery.css";
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 
