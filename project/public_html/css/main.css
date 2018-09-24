@@ -166,3 +166,16 @@ ul ul a {
 .card {
     height: 100%;
 }
+
+
+/*
+        Error page
+ */
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-template .btn {
+    width: 13em;
+}

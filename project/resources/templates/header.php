@@ -10,7 +10,7 @@
 
 <nav id="header" class="navbar navbar-expand-lg fixed-top background-slate">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php?template=home.png">
+        <a class="navbar-brand" href="index.php?template=home.php">
             <img width="100px" height="100%" src="img/layout/logo_alt.PNG" alt="VJV Medical Center">
         </a>
 
