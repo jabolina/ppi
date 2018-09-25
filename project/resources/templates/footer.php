@@ -1,5 +1,5 @@
 <footer class="page-footer background-slate font-small">
-    <div id="container-footer">
+    <div class="container-footer">
         <div class="endereco">
             <h5>endereço</h5>
             <img width="130px" src="img/layout/logo.PNG" alt="VJV Medical Center"><br>

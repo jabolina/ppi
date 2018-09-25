@@ -1,5 +1,5 @@
 <div class="scheduling">
-    <form class="scheduling-form">
+    <form class="style-forms">
 
         <div class="title-section">Dados da consulta</div>
         <div class="body-section">
@@ -66,9 +66,9 @@
                 <label for="pacient-mail">Email:</label>
                 <input type="email" id="pacient-mail" name="pacient-mail" placeholder="">
             </div>
-
-            <input type="submit" class="btn btn-green" value="Agendar">
-            <input type="reset" class="btn btn-orange" value="Cancelar">
         </div>
+
+        <input type="submit" class="btn btn-green" value="Agendar">
+        <input type="reset" class="btn btn-orange" value="Cancelar">
     </form>
 </div>
