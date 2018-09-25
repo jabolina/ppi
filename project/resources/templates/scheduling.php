@@ -54,13 +54,13 @@
             <div></div>
 
             <label for="pacient-name">nome:</label>
-            <input type="text" name="pacient-name" placeholder="seu nome...">
+            <input type="text" name="pacient-name" placeholder="">
 
             <label for="pacient-phone">telefone:</label>
-            <input type="text" name="pacient-phone" placeholder="seu telefone..." maxlength="11">
+            <input type="text" name="pacient-phone" placeholder="(XX) XXXXX-XXXX" maxlength="11">
 
             <label for="pacient-mail">email:</label>
-            <input type="email" name="pacient-mail" placeholder="seu e-mail...">
+            <input type="email" name="pacient-mail" placeholder="">
 
             <hr>
             <hr>
