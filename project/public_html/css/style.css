@@ -1,152 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800 | Roboto |Work+Sans:400,600");
 
-@media (max-width: 992px) {
-    .container {
-        width: 90% !important;
-        grid-template-areas:
-                'about'
-                'btns'
-                'typo'
-                'color'
-                'forms' !important;
-    }
-}
 
 body {
     font-family: 'Work sans', sans-serif;
     color: #555;
+    font-size: 14px !important;
 }
 
-p, .name, .code{
-    font-size: 13px;
-}
-
-.code{
-    text-transform: lowercase;
-}
-
-.text-example{
-    font-size: 15px;
-}
-
-.container {
-    width: 992px;
-    margin: 100px auto;
-    text-align: justify;
-    display: grid;
-    grid-template-areas:
-            'about  about'
-            'color  typo'
-            'btns   typo'
-            'forms  forms';
-    grid-gap: 50px;
-}
-
-#about {
-    grid-area: about;
-}
-
-#color {
-    grid-area: color;
-}
-
-#typo {
-    grid-area: typo;
-}
-
-#btns {
-    grid-area: btns;
-}
-
-#forms {
-    grid-area: forms;
-}
-
-.title-section {
-    padding: 20px 0;
-
-}
-
-.circle-1 {
-    background-color: #474380;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-
-.circle-2 {
-    background-color: #5755A1;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-
-.circle-3 {
-    background-color: #30d0c6;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-
-.circle-4 {
-    background-color: #fe854f;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-
-.circle-5 {
-    background-color: #eafaf9;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ccc;
-}
-
-.circle-6 {
-    background-color: #fefefe;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #ccc;
-}
-
-.color-name {
-    margin: 25px;
-    text-transform: uppercase;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    grid-gap: 30px;
-}
-
-.code {
-    font-style: italic;
-    color: #aaa;
-}
 
 .font-body {
     color: #474380;
     text-transform: none !important;
 }
 
-h1, h2{
+h1, h2, h3, h4, h5{
     font-family: 'Montserrat', sans-serif;
     font-weight: 800 !important;
 }
 
-h3, h4, h5{
-    font-family: 'Montserrat', sans-serif;
-}
-
-.font-body p {
-    color: #aaa;
-}
-
-.text-example {
-    text-transform: none;
-    color: #343434 !important;
-}
 
 .title-section {
     border-bottom: 3px solid #aaa;
@@ -158,25 +29,19 @@ h3, h4, h5{
     letter-spacing: 2px;
 }
 
-.body-section {}
-
-.color-name .name{
-    font-weight: 800;
-}
 
 .btn{
-    width: 150px;
-    margin: 10px;
+    width: fit-content;
     color: white;
     border-radius: 3px;
-    height: 40px;
     border: none;
     letter-spacing: 1px;
     text-transform: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     transition: 200ms;
-    cursor: pointer;
+    cursor: pointer;    
+    font-size: 14px !important;
 }
 
 .btn:hover{
@@ -244,7 +109,7 @@ textarea::-webkit-scrollbar-track{
     background-color: #eee;
 }
 
-input:focus, textarea:focus {
+*:focus {
     outline: none;
 }
 
@@ -273,7 +138,7 @@ select{
     height: 35px;
     resize: none;
     border: none;
-    border-bottom: 1px solid #474380;
+    border: 1px solid #474380;
     font-size: 14px;
     font-family: 'Work Sans', sans-serif;
     border-radius: 3px;

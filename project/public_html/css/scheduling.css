@@ -1,0 +1,38 @@
+.scheduling-form {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: auto 300px;
+    align-items: center;
+    gap: 20px 0;
+}
+
+.scheduling-form hr {
+    height: 1px;
+    width: 100%;
+}
+
+.scheduling-form .btn-green {
+    align-self: center;
+}
+
+label {
+    margin: 0;
+}
+
+#spec-select {
+    width: 100%;
+}
+
+select option {
+    text-transform: capitalize !important
+}
+
+select {
+    text-transform: capitalize !important
+}
+
+@media(max-width: 768px) {
+    .scheduling-form {
+        grid-template-columns: 1fr;
+    }
+}
