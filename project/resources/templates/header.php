@@ -22,7 +22,7 @@ require_once (LIBRARY_PATH . '/own/renderTemplates.php');
                     Home
                 </a>
 
-                <a href="#" class="dropdown-item">
+                <a href="index.php?template=scheduling.php" class="dropdown-item">
                     <i class="fas fa-file-signature"></i>
                     Agendamento
                 </a>

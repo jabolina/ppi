@@ -16,9 +16,9 @@
     </div>
 
     <div class="row form-group">
-        <label class="col-md2 col-form-label" for="civil">Motivo:</label>
-        <div class="col-md-10">
-            <select id="civil">
+        <label class="col-md-2 col-form-label" for="civil">Estado civil:</label>
+        <div class="col-md-9 register-select">
+            <select class="form-control" id="civil">
                 <option class=" form-control" value="1">Solteiro(a)</option>
                 <option class=" form-control" value="2">Casado(a)</option>
                 <option class=" form-control" value="3">Divorciado(a)</option>
@@ -51,7 +51,7 @@
     </fieldset>
 
     <div class="form-group row">
-        <div class="col-md-2">Cargo:</div>
+        <label class="col-md-2 col-form-label">Cargo:</label>
         <div class="col-md-9">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="medic" onchange="displaySpecialty(this);">

@@ -26,7 +26,7 @@
                 No que acreditamos
             </h2>
             <p class="text-center">
-                Em Deus, nosso senhor, pelo glória de Jesus
+                Em Deus, nosso senhor, pelo glória de Jesush
             </p>
         </div>
     </div>

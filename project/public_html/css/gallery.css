@@ -2,3 +2,6 @@
     display: none;
 }
 
+.gallery-grid {
+    display: grid;
+}
