@@ -1,9 +1,74 @@
-/*
-    Footer
- */
 .page-footer {
     position: absolute;
     width: 100%;
     bottom: 0;
     z-index: 951;
+}
+
+footer * {
+    color: #ffffff !important;
+}
+
+footer h5 {
+    margin-bottom: 20px;
+}
+
+#container-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 900px;
+    margin: 0 auto;
+}
+
+#container-footer hr {
+    width: 100%;
+    height: 80%;
+    background-color: #ffffff;
+    margin: auto;
+}
+
+.endereco {
+    text-align: right;
+    margin: 25px;
+}
+
+.endereco img{
+    margin-bottom: 15px;
+}
+
+.localizacao {
+    padding: 25px;
+    text-align: center;
+}
+
+.localizacao iframe {
+    width: 300px;
+    border: none;
+}
+
+#social-media {
+    padding: 25px;
+}
+
+#social-media ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0;
+    align-items: center;
+}
+
+#social-media ul li {
+    display: inline;
+    font-size: 20px;    
+}
+
+@media (max-width: 768px) {
+    #container-footer {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    footer *{
+        text-align: center !important;
+    }
 }

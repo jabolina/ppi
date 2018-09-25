@@ -49,22 +49,22 @@
                 </select>
             </div>
         </div>
-
+  
         <div class="title-section">Dados de contato</div>
         <div class="body-section">
             <div class="form-group">
                 <label for="pacient-name">Nome:</label>
-                <input class="form-control" type="text" name="pacient-name" id="pacient-name">
+                <input type="text" name="pacient-name" id="pacient-name" placeholder="">
             </div>
 
             <div class="form-group">
                 <label for="pacient-phone">Telefone:</label>
-                <input class="form-control" type="text" name="pacient-phone" id="pacient-phone" maxlength="11">
+                <input type="text" id="pacient-phone" name="pacient-phone" placeholder="(XX) XXXXX-XXXX" maxlength="11">
             </div>
 
             <div class="form-group">
                 <label for="pacient-mail">Email:</label>
-                <input class="form-control" type="email" name="pacient-mail" id="pacient-mail">
+                <input type="email" id="pacient-mail" name="pacient-mail" placeholder="">
             </div>
 
             <input type="submit" class="btn btn-green" value="Agendar">
