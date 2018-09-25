@@ -1,9 +1,3 @@
-.scheduling {
-    position: absolute;
-    top: 100px;
-    left: 280px;
-}
-
 .scheduling-form {
     margin: 50px;
     display: grid;
