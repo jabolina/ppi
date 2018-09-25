@@ -14,11 +14,11 @@ Quando clonar o repositório já rode o script ```run_this.sh```, para todos seg
 - [X] Paleta de cores
 - [X] Arquivos fixos de cabeçalho, rodapé e lateral
     - [X] Cores de acordo com a paleta
-- [ ] Páginas dos clientes
+- [X] Páginas dos clientes
     - [X] Home
     - [X] Galeria
     - [X] Contato
-    - [ ] Agendamento
+    - [X] Agendamento
     - [X] Login
 - [ ] Páginas com acesso restrito
     - [X] Cadastro
