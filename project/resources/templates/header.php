@@ -1,3 +1,8 @@
+<?php
+require_once (realpath(dirname(__FILE__)) . "/../configuration.php");
+require_once (LIBRARY_PATH . '/own/renderTemplates.php');
+?>
+
 <nav id="header" class="navbar navbar-expand-lg fixed-top background-slate">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php?template=home.php">
@@ -17,7 +22,7 @@
                     Home
                 </a>
 
-                <a href="#" class="dropdown-item">
+                <a href="index.php?template=scheduling.php" class="dropdown-item">
                     <i class="fas fa-file-signature"></i>
                     Agendamento
                 </a>
@@ -39,25 +44,25 @@
                     Cadastro
                 </a>
 
-                <a href="#" class="dropdown-item">
-                    <i class="fas fa-list-ul"></i>
-                    Listagem:
-                </a>
                 <hr>
                 <a href="#" class="dropdown-item">
-                    <a class="dropdown-item" href="#">Funcionários</a>
+                    <a class="dropdown-item" href="index.php?template=listings/list-employees.php">Funcionários</a>
                     <a class="dropdown-item" href="#">Agendamentos</a>
-                    <a class="dropdown-item" href="#">Contatos</a>
+                    <a class="dropdown-item" href="index.php?template=listings/list-contacts.php">Contatos</a>
                 </a>
-                <hr>
             </div>
         </div>
 
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item active">
-                Login
+                <a href="#" data-toggle="modal" data-target="#loginModal">
+                    Login
+                </a>
             </li>
         </ul>
 
     </div>
 </nav>
+
+<?php
+renderLayoutWithContent("login.php");

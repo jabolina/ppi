@@ -5,9 +5,7 @@
 }
 
 .scheduling-form {
-    margin: 50px;
     display: grid;
-    grid-template-columns: auto 300px;
     align-items: center;
     gap: 20px 0;
 }
