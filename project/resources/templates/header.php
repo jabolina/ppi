@@ -43,6 +43,7 @@ require_once (LIBRARY_PATH . '/own/renderTemplates.php');
                     <i class="fas fa-user-plus"></i>
                     Cadastro
                 </a>
+
                 <hr>
                 <a href="#" class="dropdown-item">
                     <a class="dropdown-item" href="index.php?template=listings/list-employees.php">Funcionários</a>

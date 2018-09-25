@@ -8,7 +8,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="index.php?template=scheduling.php">
                 <i class="fas fa-file-signature"></i>
                 Agendamento
             </a>
