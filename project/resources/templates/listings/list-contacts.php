@@ -8,7 +8,7 @@ $fakeData=array(
 ?>
 
 <div class="container-fluid">
-    <div class="title-section">Listagem de contatos recebidos</div>
+    <div class="title-section">Listagem dos contatos recebidos</div>
 
     <div class="body-section">
         <?php

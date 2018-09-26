@@ -1,17 +1,16 @@
 <?php
 $fakeData=array(
+    "Médico"=> array("Jose Augusto Bolina", "Vinicius Gonzaga", "Vinicius Scavoni"),
+    "Especialidade"=> array("Ficar quieto", "Amizade", "Amizade"),
+    "Data"=> array("12/09/2019", "08/03/2019", "23/02/2019"),
+    "Horário"=> array("09:00", "14:45", "18:00"),
     "Nome"=> array("Jose Augusto Bolina", "Vinicius Gonzaga", "Vinicius Scavoni"),
-    "Sexo"=> array("Outro", "Homem", "Homem"),
-    "Cargo"=> array("Secretário", "Médico", "Médico"),
-    "RG"=> array("MG19283-12", "SP19230-12", "MG019823-12"),
-    "Logradouro"=> array("Santa Edvirges", "Casinha doce", "Mar morto"),
-    "Bairro"=> array("Santa Monica", "Tibery", "Saraiva"),
-    "Cidade"=> array("Canapolis", "Patos", "Bebedouro")
+    "Telefone"=> array("553492368376", "553497586412", "553486748623")
 );
 ?>
 
 <div class="container-fluid">
-    <div class="title-section">Listagem dos funcionários</div>
+    <div class="title-section">Listagem dos agendamentos</div>
 
     <div class="body-section">
         <?php

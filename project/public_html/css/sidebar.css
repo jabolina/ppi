@@ -2,11 +2,6 @@
         Sidebar
  */
 
-.wrapper {
-    display: flex;
-    width: 100%;
-}
-
 .sidebar {
     width: 15em;
     position: fixed;
