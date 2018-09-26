@@ -20,12 +20,12 @@ Quando clonar o repositório já rode o script ```run_this.sh```, para todos seg
     - [X] Contato
     - [X] Agendamento
     - [X] Login
-- [ ] Páginas com acesso restrito
+- [X] Páginas com acesso restrito
     - [X] Cadastro
-    - [ ] Listagem
+    - [X] Listagem
         - [X] Funcionarios
         - [X] Contatos
-        - [ ] Agendamento
+        - [X] Agendamento
 - [X] Fazer as páginas ficarem bonitas
 - [ ] Entrega 1 dia 26/09(siga as [requisições](https://github.com/jabolina/ppi/blob/master/documentation/assignment.pdf))
 - [ ] ...
