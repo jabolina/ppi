@@ -47,7 +47,7 @@
                     <a href="index.php?template=listings/list-employees.php">Funcionários</a>
                 </li>
                 <li>
-                    <a href="#">Agendamentos</a>
+                    <a href="index.php?template=listings/list-schedules.php">Agendamentos</a>
                 </li>
                 <li>
                     <a href="index.php?template=listings/list-contacts.php">Contatos</a>

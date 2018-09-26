@@ -8,7 +8,7 @@
 <div class="container-fluid">
 
 
-    <form class="style-forms">
+    <form>
 
         <?php
             renderLayoutWithoutContent("register/register-personal.php");
