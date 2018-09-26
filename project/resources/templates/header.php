@@ -44,12 +44,12 @@ require_once (LIBRARY_PATH . '/own/renderTemplates.php');
                     Cadastro
                 </a>
 
-                <hr>
-                <a href="#" class="dropdown-item">
-                    <a class="dropdown-item" href="index.php?template=listings/list-employees.php">Funcionários</a>
-                    <a class="dropdown-item" href="index.php?template=listings/list-schedules.php">Agendamentos</a>
-                    <a class="dropdown-item" href="index.php?template=listings/list-contacts.php">Contatos</a>
-                </a>
+                <span>Listar:</span>
+                <br>
+
+                <a class="dropdown-item" href="index.php?template=listings/list-employees.php">Funcionários</a>
+                <a class="dropdown-item" href="index.php?template=listings/list-schedules.php">Agendamentos</a>
+                <a class="dropdown-item" href="index.php?template=listings/list-contacts.php">Contatos</a>
             </div>
         </div>
 
