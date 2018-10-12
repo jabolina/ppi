@@ -3,14 +3,9 @@
  */
 
 .sidebar {
-    width: 15em;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    height: 100vh;
+    grid-area: menu;
     z-index: 950;
-    box-shadow: -10px 0px 20px 10px #bbb;
-    transition: all 0.3s;
+    border-right: 1px solid #bbb;
 }
 
 .sidebar.active {
@@ -62,7 +57,8 @@ ul ul a {
 
 @media (max-width: 768px) {
     .sidebar {
-        margin-left: -250px;
+        display: none;
+        width: 0;
     }
     .sidebar.active {
         margin-left: 0;

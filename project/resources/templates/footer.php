@@ -1,6 +1,6 @@
-<footer class="page-footer background-slate font-small">
+<div class="page-footer background-slate font-small">
     <div class="container-footer">
-        <div class="endereco">
+        <div class="clinic-address">
             <h5>endereço</h5>
             <img width="130px" src="img/layout/logo.PNG" alt="VJV Medical Center"><br>
             Av. João Naves de Ávila, 2121<br>
@@ -9,13 +9,13 @@
             38408-100<br>
         </div>
 
-        <div class="localizacao">
+        <div class="clinic-location">
             <h5>localização</h5>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.29992924322!2d-48.259824784725836!3d-18.918113887178666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a44574c062bad3%3A0x656d242f316ee167!2sUniversidade+Federal+de+Uberl%C3%A2ndia!5e0!3m2!1spt-BR!2sbr!4v1537844371803"
                 allowfullscreen></iframe>
         </div>
 
-        <div id="social-media">
+        <div class="social-media">
             <h5>redes sociais</h5>
             <ul>
                 <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
@@ -35,4 +35,4 @@
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
         <a href="https://github.com/jabolina/ppi/" target="_blank">VJV Medical Center</a>
     </div>
-</footer>
+</div>

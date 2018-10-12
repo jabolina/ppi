@@ -14,9 +14,9 @@
 
         require_once(TEMPLATES_PATH . "/header.php");
 
-        echo "<div id='content' class='vjv-content'>";
-
         require_once(TEMPLATES_PATH . "/sidebar.php");
+
+        echo "<div id='content' class='vjv-content'>";
 
         if (file_exists($contentFilePath)) {
             require_once ($contentFilePath);
