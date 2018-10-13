@@ -1,3 +1,7 @@
+.clinic-header {
+    grid-area: header;
+}
+
 .dropdown-menu hr {
     border: 1px solid #5755A1;;
 }

@@ -1,4 +1,4 @@
-<nav id="sidebar" class="col-2 sidebar background-white">
+<div id="sidebar" class="sidebar background-white">
     <ul class="list-unstyled components">
         <li class="active">
             <a href="index.php?template=home.php">
@@ -55,4 +55,4 @@
             </ul>
         </li>
     </ul>
-</nav>
+</div>

@@ -1,14 +1,15 @@
-<div class="row">
-    <div class="col-12">
-        <header class="home-header">
-            <h1 class="display-3 text-center mt-4">
-                Clínica
-            </h1>
-        </header>
-    </div>
-</div>
-
 <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <header class="home-header">
+                <h1 class="display-3 text-center mt-4">
+                    Clínica
+                </h1>
+            </header>
+        </div>
+    </div>
+
+
     <div class="row">
         <div class="col-sm-7">
             <h2 class="mt-4">
