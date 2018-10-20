@@ -31,6 +31,8 @@
 
             if (isset($_GET['template'])) {
                 renderLayoutWithContent($_GET['template']);
+            } else if (isset($_POST['template'])) {
+                renderLayoutWithContent($_POST['template']);
             } else {
                 renderLayoutWithContent('home.php');
             }

@@ -7,16 +7,16 @@
  * Configurações como credenciais do banco de dados, caminho para arquivos, etc.
  */
 
-$config= array(
+define("config", array(
     "db"=> array(
-        "name"=> "ppi",
+        "name"=> "VJV_CLINIC",
         "username"=> "root",
         "password"=> "root",
-        "host"=> "127.0.0.1",
+        "host"=> "localhost",
         "port"=> 3306
     ),
     "baseURL"=> "localhost"
-);
+));
 
 defined("LIBRARY_PATH")
     or define("LIBRARY_PATH", realpath(dirname(__FILE__) . '/library'));
