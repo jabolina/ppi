@@ -1,8 +1,32 @@
+<?php
+require_once (realpath(dirname(__FILE__)) . "/../../configuration.php");
+require_once (LIBRARY_PATH . '/own/database-connection.php');
+require_once (LIBRARY_PATH . '/own/data-management.php');
+require_once ("authenticate.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $userEmail = parseData($_POST["emailLogin"]);
+    $userPassword = parseData($_POST["passLogin"]);
+
+    $message = "";
+
+    try {
+        $conn = databaseConnect();
+        $message = loginUser($userEmail, $userPassword, $conn);
+    } catch (Exception $e) {
+        $message = $e.$message;
+    }
+
+    if ($message != "") {
+        echo "<script>displayLoginStatus($message)</script>";
+    }
+}
+?>
+
 <div class="modal fade" id="loginModal" role="dialog">
     <div class="modal-dialog">
 
         <div class="modal-content">
-
             <div class="modal-header">
                 <img class="img-fluid mx-auto d-block" src="img/layout/logo-white.JPG" height="105.6px" width="233.1px">
 
@@ -12,7 +36,9 @@
             </div>
 
             <div class="modal-body">
-                <form>
+                <div id="login-status-alert" class="alert alert-danger" role="alert" style="display: none;"></div>
+
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
                         <label for="emailLogin">Email</label>
                         <input type="email" class="form-control" id="emailLogin" name="emailLogin">

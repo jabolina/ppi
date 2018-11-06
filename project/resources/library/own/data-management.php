@@ -6,5 +6,3 @@ function parseData($data) {
 
     return $data;
 }
-
-
