@@ -1,6 +1,15 @@
 <?php
 require_once (realpath(dirname(__FILE__)) . "/../configuration.php");
 require_once (LIBRARY_PATH . '/own/renderTemplates.php');
+require_once (LIBRARY_PATH . '/own/database-connection.php');
+require_once (TEMPLATES_PATH . '/login/authenticate.php');
+
+$conn = null;
+
+try {
+    $conn = databaseConnect();
+} catch (Exception $e) {}
+
 ?>
 
 <nav id="header" class="navbar navbar-expand-lg clinic-header background-slate">
@@ -37,26 +46,34 @@ require_once (LIBRARY_PATH . '/own/renderTemplates.php');
                     Fale conosco
                 </a>
 
-                <hr>
-
-                <a href="index.php?template=register-root.php" class="dropdown-item">
-                    <i class="fas fa-user-plus"></i>
-                    Cadastro
-                </a>
-
-                <span>Listar:</span>
-                <br>
-
-                <a class="dropdown-item" href="index.php?template=listings/list-employees.php">Funcionários</a>
-                <a class="dropdown-item" href="index.php?template=listings/list-schedules.php">Agendamentos</a>
-                <a class="dropdown-item" href="index.php?template=listings/list-contacts.php">Contatos</a>
+                <?php
+                try {
+                    if ($conn != null && checkLogin($conn)) {
+                        echo '<a href="index.php?template=register-root.php" class="dropdown-item">' .
+                            '<i class="fas fa-user-plus"></i>' .
+                            'Cadastro<hr>' .
+                            '</a>' .
+                            '<span>Listar:</span>' .
+                            '<br>' .
+                            '<a class="dropdown-item" href="index.php?template=listings/list-employees.php">Funcionários</a>' .
+                            '<a class="dropdown-item" href="index.php?template=listings/list-schedules.php">Agendamentos</a>' .
+                            '<a class="dropdown-item" href="index.php?template=listings/list-contacts.php">Contatos</a>';
+                    }
+                } catch (Exception $e) {}
+                ?>
             </div>
         </div>
 
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item active">
                 <a href="#" data-toggle="modal" data-target="#loginModal">
-                    Login
+                    <?php
+                    try {
+                        if ($conn != null && !checkLogin($conn)) {
+                            echo 'Login';
+                        }
+                    } catch (Exception $e) {}
+                    ?>
                 </a>
             </li>
         </ul>
@@ -65,4 +82,8 @@ require_once (LIBRARY_PATH . '/own/renderTemplates.php');
 </nav>
 
 <?php
-renderLayoutWithoutContent("login.php");
+try {
+    if ($conn != null && !checkLogin($conn)) {
+        renderLayoutWithoutContent("login/login.php");
+    }
+} catch (Exception $e) {}

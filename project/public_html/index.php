@@ -1,6 +1,8 @@
 <?php
     require_once(realpath(dirname(__FILE__)) . "/../resources/configuration.php");
     require_once(LIBRARY_PATH . "/own/renderTemplates.php");
+
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
     <div class="wrapper">
