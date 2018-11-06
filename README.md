@@ -39,9 +39,9 @@ a senha de super usuário e a senha do banco de dados. Caso o banco já exista, 
     - [X] Contatos
     - [ ] Empregados
     - [ ] Agendamentos
-- [ ] Login com verificação
-- [ ] Criação de sessões
-- [ ] Telas separadas para usuários autenticados ou não
+- [X] Login com verificação
+- [X] Criação de sessões
+- [X] Telas separadas para usuários autenticados ou não
 - [ ] Requisições assíncronas onde for possível
 - [ ] Organizar no AwardSpace, junto com banco
 - [ ] Entrega 2 (siga as [requisições](https://github.com/jabolina/ppi/blob/master/documentation/assignment.pdf))    
