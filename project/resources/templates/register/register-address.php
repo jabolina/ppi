@@ -9,7 +9,7 @@
     </div>
 
     <div class="form-group row">
-        <div class="col-md-2">Cargo:</div>
+        <div class="col-md-2">Tipo:</div>
         <div class="col-md-9">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="street">
