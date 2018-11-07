@@ -27,13 +27,15 @@ function listEmployees ($conn) {
     $employees = [];
 
     $sql = "
-        SELECT ID, 
+        SELECT empl.ID, 
         EMPLOYEE_NAME, 
         EMPLOYEE_SEX, 
         EMPLOYEE_RG, 
-        EMPLOYEE_STREET, 
-        EMPLOYEE_NEIGH,
-        EMPLOYEE_CITY FROM VJV_EMPLOYEES;
+        EMPLOYEE_ROLE,
+        STREET, 
+        NEIGH,
+        CITY FROM VJV_EMPLOYEES empl, VJV_EMPLOYEES_ADDRESS addrs WHERE
+        empl.ID = addrs.ID_EMPLOYEE;
     ";
 
     if (!$statement = $conn->prepare($sql)) {
