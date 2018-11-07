@@ -2,7 +2,7 @@ drop schema if exists VJV_CLINIC;
 create schema if not exists VJV_CLINIC;
 use VJV_CLINIC;
 
-create table if not exists VJV_MESSAGES
+create table VJV_MESSAGES
 (
 	ID int auto_increment,
 	CLIENT_NAME varchar(255) not null,
@@ -18,7 +18,7 @@ alter table VJV_MESSAGES
 	add primary key (ID)
 ;
 
-create table if not exists VJV_USERS
+create table VJV_USERS
 (
 	ID int auto_increment,
 	USER_EMAIL varchar(255) not null,
@@ -28,40 +28,38 @@ create table if not exists VJV_USERS
 )
 ;
 
-insert into VJV_USERS
-value
-(
-	null,
-	'admin@vjvclinic.com',
-	'@@vjv_cl1n1c@@'
-);
-
-
 create table if not exists VJV_EMPLOYEES
 (
 	ID int auto_increment,
-	NOME varchar(255) not null,
-	NASCIMENTO date not null,
-	ESTADO_CIVIL int not null,
-	GENERO int not null,
-	CARGO int not null,
-	ESPECIALIDADE int,
-	CPF varchar(13) not null,
-	RG varchar(10) not null,
+	EMPLOYEE_NAME varchar(255) not null,
+	EMPLOYEE_BIRTHDAY varchar(255) not null,
+	ESTADO_CIVIL int,
+	EMPLOYEE_SEX varchar(2) not null,
+	EMPLOYEE_ROLE int not null,
+	EMPLOYEE_SPECIALTY int,
+	EMPLOYEE_CPF varchar(13) not null unique,
+	EMPLOYEE_RG varchar(10) not null,
 	constraint VJV_EMPLOYEES_ID_uindex
 		unique (ID)
 );
 
-create table if not exists VJV_EMPLOYEES_ADRESS
+alter table VJV_EMPLOYEES
+  add primary key (ID)
+;
+
+create table if not exists VJV_EMPLOYEES_ADDRESS
 (
+  ID int auto_increment,
 	ID_EMPLOYEE int not null,
 	CEP varchar(8) not null,
-	TIPO_LOGRADOURO int not null,
-	LOGRADOURO varchar(255) not null,
-	NUMERO int not null,
-	COMPLEMENTO varchar(25),
-	BAIRRO varchar(255) not null,
-	CIDADE int not null,
-	ESTADO char(2) not null,
-	FOREIGN KEY (ID_EMPLOYEE) REFERENCES VJV_EMPLOYEES(ID)
+	STREET_TYPE int,
+	STREET varchar(255) not null,
+	`NUMBER` int not null,
+	COMPLEMENT varchar(25),
+	NEIGH varchar(255) not null,
+	CITY varchar(255) not null,
+	PROVINCE varchar(255) not null,
+	FOREIGN KEY (ID_EMPLOYEE) REFERENCES VJV_EMPLOYEES(ID),
+	constraint VJV_EMPLOYEES_ADDRESS_ID_uindex
+	  unique (ID)
 );

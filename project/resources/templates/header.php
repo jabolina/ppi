@@ -5,9 +5,10 @@ require_once (LIBRARY_PATH . '/own/database-connection.php');
 require_once (TEMPLATES_PATH . '/login/authenticate.php');
 
 $conn = null;
-
+$isLogged = false;
 try {
     $conn = databaseConnect();
+    $isLogged = checkLogin($conn);
 } catch (Exception $e) {}
 
 ?>
@@ -48,7 +49,7 @@ try {
 
                 <?php
                 try {
-                    if ($conn != null && checkLogin($conn)) {
+                    if ($isLogged) {
                         echo '<a href="index.php?template=register-root.php" class="dropdown-item">' .
                             '<i class="fas fa-user-plus"></i>' .
                             'Cadastro<hr>' .
@@ -68,11 +69,9 @@ try {
             <li class="nav-item active">
                 <a href="#" data-toggle="modal" data-target="#loginModal">
                     <?php
-                    try {
-                        if ($conn != null && !checkLogin($conn)) {
-                            echo 'Login';
-                        }
-                    } catch (Exception $e) {}
+                    if (!$isLogged) {
+                        echo 'Login';
+                    }
                     ?>
                 </a>
             </li>
@@ -82,8 +81,6 @@ try {
 </nav>
 
 <?php
-try {
-    if ($conn != null && !checkLogin($conn)) {
-        renderLayoutWithoutContent("login/login.php");
-    }
-} catch (Exception $e) {}
+if (!$isLogged) {
+    renderLayoutWithoutContent("login/login.php");
+}
