@@ -78,13 +78,18 @@ function findEmployee ($mysqli, $cpf) {
 function insertAddress ($conn) {
     $cpf = parseData($_POST["cpf"]);
     $cep = parseData($_POST["cep"]);
-    $tipoLogradouro = parseData($_POST['streetType']);
     $logradouro = parseData($_POST['streetName']);
     $nro = parseData($_POST['numberHouse']);
     $complemento = parseData($_POST['complement']);
     $bairro = parseData($_POST['neighborhood']);
     $cidade = parseData($_POST['cidade']);
     $estado = parseData($_POST['state']);
+
+    $tipoLogradouro = "";
+    if (!empty($_POST['streetType'])) {
+        foreach ($_POST['streetType'] as $st)
+        $tipoLogradouro = parseData($st);
+    }
 
     $userId = findEmployee($conn, $cpf);
 
@@ -99,17 +104,17 @@ function insertAddress ($conn) {
     }
 
     if (!$statement = $conn->prepare($sql)) {
-        throw new Exception("(ENDEREÇO)Falha na prepação do MySQL: " . $conn->error);
+        throw new Exception("(ENDEREÇO) Falha na prepação do MySQL: " . $conn->error);
     }
 
     if (!$statement->bind_param("isisissss", $userId, $cep, $tipoLogradouro, $logradouro, $nro, $complemento,
         $bairro, $cidade, $estado)) {
 
-        throw new Exception("(ENDEREÇO)Falha ao conectar variáveis do MySQL: " . $statement->error);
+        throw new Exception("(ENDEREÇO) Falha ao conectar variáveis do MySQL: " . $statement->error);
     }
 
     if (!$statement->execute()) {
-        throw new Exception("(ENDEREÇO)Erro ao executar inserção no MySQL: " . $statement->error);
+        throw new Exception("(ENDEREÇO) Erro ao executar inserção no MySQL: " . $statement->error);
     }
 }
 
