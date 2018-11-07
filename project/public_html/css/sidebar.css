@@ -3,9 +3,13 @@
  */
 
 .sidebar {
-    grid-area: menu;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
     z-index: 950;
-    border-right: 1px solid #bbb;
+    /* border-right: 1px solid #bbb; */
+    box-shadow: 3px 0px 4px 0px #ddd;
 }
 
 .sidebar.active {
@@ -23,8 +27,7 @@
 }
 
 .sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 10px 40px;
     display: block;
 }
 

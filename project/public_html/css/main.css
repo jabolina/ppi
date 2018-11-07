@@ -11,7 +11,7 @@
 @import "scheduling.css";
 @import "register.css";
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800 |Work+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
 
 /*
         Default styles
@@ -20,13 +20,13 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: 'Work Sans', sans-serif;
-    background: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    background: #FFFFFF;    
 }
 
 p {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
@@ -42,10 +42,9 @@ a:focus {
 
 .wrapper {
     display: grid;
-    grid-template-areas: 'header header header header header header header header header header header header'
-    'menu menu main main main main main main main main main main'
-    'footer footer footer footer footer footer footer footer footer footer footer footer';
-    grid-gap: 10px;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px auto 300px;
+    grid-gap: 0 10px;
     width: 100%;
     height: 100%;
     /*position: relative;
@@ -54,8 +53,15 @@ a:focus {
 }
 
 .vjv-content {
-    grid-area: main;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
     transition: all 0.3s;
+    width: 60%;
+    margin: 50px auto;
+    min-height: 90vh;
+    height: 100%;
 }
 
 .hide-until {
@@ -64,7 +70,7 @@ a:focus {
 
 @media (max-width: 768px) {
     .vjv-content {
-        width: 100%;
+        width: 95%;
     }
 
     .hide-until {

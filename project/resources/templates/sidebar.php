@@ -49,13 +49,13 @@ try {
         '<li>' .
             '<a href="index.php?template=register-root.php">'.
                 '<i class="fas fa-user-plus"></i>'.
-                'Cadastro' .
+                ' Cadastro' .
             '</a>'.
         '</li>'.
         '<li>' .
             '<a href="#listings" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">' .
                 '<i class="fas fa-list-ul"></i>' .
-                'Listagem' .
+                ' Listagem' .
             '</a>' .
             '<ul class="collapse list-unstyled" id="listings">' .
                 '<li>' .

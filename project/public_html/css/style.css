@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800 | Roboto |Work+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,800");
 
 
 body {
@@ -14,8 +14,8 @@ body {
 }
 
 h1, h2, h3, h4, h5{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800 !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700 !important;
 }
 
 
@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5{
     transition: 200ms;
     cursor: pointer;    
     font-size: 14px !important;
+    margin: 20px;
 }
 
 .btn:hover{
@@ -62,6 +63,7 @@ h1, h2, h3, h4, h5{
 
 .form-group{
     padding: 15px;
+    
 }
 
 .form-group>*{
@@ -72,15 +74,16 @@ h1, h2, h3, h4, h5{
 .style-forms .body-section{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
+    grid-gap: 0 50px;
 }
 
-input[type = text], input[type = email], input[type = password], input[type = number], input[type = date] {
+input[type = text], input[type = email], input[type = password], input[type = number]{
     border: none;
     border-bottom: 1px solid #474380;
     font-size: 14px;
     font-family: 'Work Sans', sans-serif;
     padding: 2px;
+    width: 100%;
 }
 
 body::-webkit-scrollbar {
