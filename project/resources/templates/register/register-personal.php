@@ -18,12 +18,12 @@
     <div class="row form-group">
         <label class="col-md-2 col-form-label" for="civil">Estado civil:</label>
         <div class="col-md-9 register-select">
-            <select class="form-control" id="civil">
-                <option class=" form-control" value="1">Solteiro(a)</option>
-                <option class=" form-control" value="2">Casado(a)</option>
-                <option class=" form-control" value="3">Divorciado(a)</option>
-                <option class=" form-control" value="4">Viúvo(a)</option>
-                <option class=" form-control" value="5">Separado(a)</option>
+            <select class="form-control" id="civil" name="civil[]">
+                <option class=" form-control" name="civil[]" value="1">Solteiro(a)</option>
+                <option class=" form-control" name="civil[]" value="2">Casado(a)</option>
+                <option class=" form-control" name="civil[]" value="3">Divorciado(a)</option>
+                <option class=" form-control" name="civil[]" value="4">Viúvo(a)</option>
+                <option class=" form-control" name="civil[]" value="5">Separado(a)</option>
             </select>
         </div>
     </div>
@@ -38,12 +38,12 @@
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="woman" name="drone" value="1" />
+                    <input class="form-check-input" type="radio" id="woman" name="drone" value="2" />
                     <label for="woman">Mulher</label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="otherSex" name="drone" value="1" checked />
+                    <input class="form-check-input" type="radio" id="otherSex" name="drone" value="3" checked />
                     <label for="otherSex">Outro</label>
                 </div>
             </div>
@@ -54,25 +54,25 @@
         <label class="col-md-2 col-form-label">Cargo:</label>
         <div class="col-md-9">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="medic" onchange="displaySpecialty(this);">
+                <input class="form-check-input" name="role[]" type="checkbox" id="medic" onchange="displaySpecialty(this);">
                 <label class="form-check-label" for="medic">
                     Médico(a)
                 </label>
 
                 <br>
-                <input class="form-check-input" type="checkbox" id="nurse">
+                <input class="form-check-input" name="role[]" type="checkbox" id="nurse">
                 <label class="form-check-label" for="nurse">
                     Enfermeiro(a)
                 </label>
 
                 <br>
-                <input class="form-check-input" type="checkbox" id="secretary">
+                <input class="form-check-input" name="role[]" type="checkbox" id="secretary">
                 <label class="form-check-label" for="secretary">
                     Secretário(a)
                 </label>
 
                 <br>
-                <input class="form-check-input" type="checkbox" id="otherJob">
+                <input class="form-check-input" name="role[]" type="checkbox" id="otherJob">
                 <label class="form-check-label" for="otherJob">
                     Outro
                 </label>
@@ -83,7 +83,7 @@
     <div id="doctorSpecialty" class="row form-group" style="display: none;">
         <label for="area" class="col-md-2 col-form-label">Especialidade:</label>
         <div class="col-md-9">
-            <input type="text" class="form-control" id="area" name="nome">
+            <input type="text" class="form-control" id="area" name="specialty">
         </div>
     </div>
 </div>

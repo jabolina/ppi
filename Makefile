@@ -26,7 +26,10 @@ update:
 
 database:
 	@echo "Database $(DATABASE_NAME) will be dropped and the created!!"
-	cat database.sql | sudo mysql -u root -p
+	cat database.sql | sudo mysql -u root -p;
+
+	@echo "Database $(DATABASE_NAME) will be feeded with some data!!"
+	cat feed-db.sql | sudo mysql -u root -p;
 
 	@echo "If success, database created :)"
 
