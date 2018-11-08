@@ -1,6 +1,6 @@
 <script type="text/javascript" src="js/gallery.js"></script>
 
-<div class="container-fluid">
+<div class="generic-card gallery-card">
     <div class="title-section">Galeria</div>
 
     <div class="body-section">

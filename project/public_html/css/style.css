@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800 | Roboto |Work+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,800");
 
 
 body {
@@ -14,8 +14,8 @@ body {
 }
 
 h1, h2, h3, h4, h5{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800 !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700 !important;
 }
 
 
@@ -42,18 +42,28 @@ h1, h2, h3, h4, h5{
     transition: 200ms;
     cursor: pointer;    
     font-size: 14px !important;
+    margin: 20px;
 }
 
 .btn:hover{
     opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 .btn-orange{
     background: #fe854f;
 }
 
+.btn-orange:hover {
+    box-shadow: 0px 6px 25px 3px #FEC7AF;
+}
+
 .btn-green{
     background: #30d0c6;
+}
+
+.btn-green:hover {
+    box-shadow: 0px 6px 25px 3px #A0E9E5;
 }
 
 .btn-purple{
@@ -62,25 +72,32 @@ h1, h2, h3, h4, h5{
 
 .form-group{
     padding: 15px;
+    
 }
 
 .form-group>*{
     display: block;
-    margin: 8px;
+}
+
+.form-group>label{
+    margin: 5px;
 }
 
 .style-forms .body-section{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
+    grid-gap: 0 50px;
 }
 
-input[type = text], input[type = email], input[type = password], input[type = number], input[type = date] {
-    border: none;
-    border-bottom: 1px solid #474380;
-    font-size: 14px;
-    font-family: 'Work Sans', sans-serif;
-    padding: 2px;
+input[type], select, textarea{
+    font-family: 'Lato', sans-serif;
+    height: 32px;
+    border-radius: 0 !important;
+}
+
+input[type]:focus, select:focus, textarea:focus {
+    border: #474380 !important;
+    box-shadow: 0px 0px 2px 0.5px #8987AE!important;
 }
 
 body::-webkit-scrollbar {
@@ -123,14 +140,11 @@ label{
 }
 
 textarea{
-    width: 80%;
+    width: 100%;
     height: 100px;
     resize: none;
-    border: 1px solid #474380;
-    font-size: 14px;
-    font-family: 'Work Sans', sans-serif;
     overflow: auto;
-    border-radius: 3px;
+    border: solid 1px #dbdbdb;
 }
 
 select{
@@ -155,4 +169,21 @@ fieldset label{
 
 legend{
     font-weight: 600;
+}
+
+.generic-card {
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px 50px;
+    box-shadow: 0px 10px 20px 5px #e6e6fa, 0px 22px 35px 15px #e6e6fa;
+}
+
+.generic-card label, .generic-card input, .generic-card textarea, .generic-card select  {
+    font-size: 12px !important;
+}
+
+@media (max-width: 768px) {
+    .generic-card {
+        padding: 20px;
+    }
 }

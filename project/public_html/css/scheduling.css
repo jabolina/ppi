@@ -1,15 +1,13 @@
-.scheduling{
-    /*
-    ?????????????????
-    position: absolute;
-    top: 100px;
-    left: 250px;
-    */
+.scheduling-card{
+    width: 70%;
+    min-width: 300px;
+    max-width: 750px;
 }
 
 .scheduling-form {
     display: grid;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
     gap: 20px 0;
 }
 
@@ -38,8 +36,8 @@ select {
     text-transform: capitalize !important
 }
 
-@media(max-width: 768px) {
+@media(max-width: 1150px) {
     .scheduling-form {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 }
