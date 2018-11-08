@@ -9,7 +9,7 @@
     grid-column-end: 2;
     z-index: 950;
     /* border-right: 1px solid #bbb; */
-    box-shadow: 3px 0px 4px 0px #ddd;
+    box-shadow: 3px 0px 4px 0px #e6e6fa, 6px 0px 25px 7px #e6e6fa;
 }
 
 .sidebar.active {
@@ -38,7 +38,8 @@
 
 .sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: rgba(86, 86, 86, 1);
+    color: #5755A1;
+    background: lavender;
 }
 
 a[data-toggle="collapse"] {
@@ -62,6 +63,8 @@ ul ul a {
     .sidebar {
         display: none;
         width: 0;
+        grid-row-start: 1;
+        grid-row-end: 1;
     }
     .sidebar.active {
         margin-left: 0;

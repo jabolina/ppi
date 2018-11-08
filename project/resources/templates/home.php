@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="generic-card home-card">
     <div class="row">
         <div class="col-12">
             <header class="home-header">

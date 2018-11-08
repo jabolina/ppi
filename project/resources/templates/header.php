@@ -20,7 +20,7 @@ try {
         </a>
 
         <div class="nav-item dropdown hide-until">
-            <a class="nav-link dropdown" href="#"
+            <a class="nav-link dropdown" style="color: #ffffff !important;" href="#"
                id="hiddenMenu" data-toggle="dropdown"
                aria-haspopup="true" aria-expanded="false">
 
@@ -42,7 +42,7 @@ try {
                     Galeria
                 </a>
 
-                <a href="index.php?template=contact.php" class="dropdown-item">
+                <a href="index.php?template=contact/contact.php" class="dropdown-item">
                     <i class="fas fa-comments"></i>
                     Fale conosco
                 </a>
@@ -66,8 +66,8 @@ try {
         </div>
 
         <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a href="#" data-toggle="modal" data-target="#loginModal">
+            <li class="nav-item active" >
+                <a href="#" data-toggle="modal" style="color: #ffffff !important;" data-target="#loginModal">
                     <?php
                     if (!$isLogged) {
                         echo 'Login';

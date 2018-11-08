@@ -62,9 +62,15 @@ footer h5 {
 }
 
 @media (max-width: 768px) {
+    .page-footer {
+        grid-row-start: 3;
+        padding: 10px;
+    }
+
     .container-footer {
         grid-template-columns: 1fr;
-        width: 50%;
+        width: 100%;
+        margin: auto;
     }
 
     .clinic-address {

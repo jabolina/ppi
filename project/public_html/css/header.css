@@ -13,3 +13,11 @@
 .dropdown-menu span {
     padding: 0 0 0 3.5em;
 }
+
+@media (max-width: 768px) {
+    .clinic-header {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
