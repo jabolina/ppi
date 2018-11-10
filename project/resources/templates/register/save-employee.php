@@ -32,6 +32,10 @@ function insertEmployee ($conn) {
         $especialidade = parseData($_POST['specialty']);
     }
 
+    if ($nome == "" || $dataNasc == "" || $genero == "" || $cargo == "" || $cpf == "" || $rg == "") {
+        throw new Exception("Um ou mais campos necessários estão vazios");
+    }
+
     $sql = "
           INSERT INTO VJV_EMPLOYEES (
                 ID, EMPLOYEE_NAME, EMPLOYEE_BIRTHDAY, ESTADO_CIVIL, EMPLOYEE_SEX, 
@@ -51,6 +55,8 @@ function insertEmployee ($conn) {
     if (!$statement->execute()) {
         throw new Exception("Erro ao executar inserção no MySQL: " . $statement->error);
     }
+
+    $statement->close();
 }
 
 function findEmployee ($mysqli, $cpf) {
@@ -67,6 +73,7 @@ function findEmployee ($mysqli, $cpf) {
         if ($stmt->num_rows == 1) {
             $stmt->bind_result($userId);
             $stmt->fetch();
+            $stmt->close();
 
             return $userId;
         }
@@ -89,6 +96,10 @@ function insertAddress ($conn) {
     if (!empty($_POST['streetType'])) {
         foreach ($_POST['streetType'] as $st)
         $tipoLogradouro = parseData($st);
+    }
+
+    if ($cep == "" || $logradouro == "" || $nro == "" || $bairro == "" || $cidade == "" || $estado == "") {
+        throw new Exception("Um ou mais campos de endereço obrigatórios estão vazios");
     }
 
     $userId = findEmployee($conn, $cpf);
@@ -116,15 +127,24 @@ function insertAddress ($conn) {
     if (!$statement->execute()) {
         throw new Exception("(ENDEREÇO) Erro ao executar inserção no MySQL: " . $statement->error);
     }
+
+    $statement->close();
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")  {
     try {
         $conn = databaseConnect();
+        $conn->begin_transaction();
         insertEmployee($conn);
         insertAddress($conn);
+
+        $conn->commit();
+
     } catch (Exception $e) {
+        $conn->rollback();
         $errorMessage = $e->getMessage();
+    } finally {
+        $conn->close();
     }
 
     if ($errorMessage == "") {
@@ -136,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")  {
     } else {
         echo "
             <div class='alert alert-danger' role='alert'>
-              Erro ao salvar nova funcionário. $errorMessage.
+              Erro ao salvar novo funcionário. $errorMessage.
             </div>
         ";
     }

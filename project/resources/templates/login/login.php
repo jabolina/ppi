@@ -49,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="password" class="form-control" id="passLogin" name="passLogin">
                     </div>
 
-                    <input type="submit"  class="btn btn-green btn-block" value="Login">
-                    <input type="reset" class="btn btn-orange btn-block" data-dismiss="modal" value="Fechar">
+                    <input type="submit" style="width: 92%" class="btn btn-green btn-block" value="Login">
+                    <input type="reset" style="width: 92%" class="btn btn-orange btn-block" data-dismiss="modal" value="Fechar">
                 </form>
             </div>
         </div>

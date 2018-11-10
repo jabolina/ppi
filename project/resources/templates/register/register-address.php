@@ -4,7 +4,7 @@
     <div class="row form-group">
         <label for="cep" class="col-md-2 col-form-label">CEP:</label>
         <div class="col-md-9">
-            <input type="number" class="form-control" id="cep" name="cep">
+            <input type="text" maxlength="8" class="form-control" id="cep" name="cep">
         </div>
     </div>
 
