@@ -1,6 +1,7 @@
 <?php
     require_once (realpath(dirname(__FILE__)) . "/../configuration.php");
     require_once (LIBRARY_PATH . '/own/renderTemplates.php');
+    require_once (TEMPLATES_PATH . '/register/save-employee.php');
 ?>
 
 <script type="text/javascript" src="js/register.js"></script>
@@ -8,7 +9,7 @@
 <div class="container-fluid" style="width: 60%; margin-right: auto">
 
 
-    <form action="index.php?template=register/save-employee.php" method="post" class="style-forms">
+    <form action="index.php?template=register-root.php" method="post" class="style-forms">
 
         <?php
             renderLayoutWithoutContent("register/register-personal.php");
