@@ -6,7 +6,7 @@
 
 <script type="text/javascript" src="js/register.js"></script>
 
-<div class="container-fluid" style="width: 60%; margin-right: auto">
+<div class="generic-card" >
 
 
     <form action="index.php?template=register-root.php" method="post" class="style-forms">

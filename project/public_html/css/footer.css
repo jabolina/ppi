@@ -1,21 +1,25 @@
 .page-footer {
-    grid-area: footer;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
     z-index: 951;
+    padding: 40px;
 }
 
-footer * {
+.container-footer * {
     color: #ffffff !important;
 }
 
 footer h5 {
-    margin-bottom: 20px;
+    margin-bottom: 30px !important;
 }
 
 .container-footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
+    grid-gap: 50px;
 }
 
 .container-footer hr {
@@ -27,7 +31,6 @@ footer h5 {
 
 .clinic-address {
     text-align: right;
-    margin: 25px;
 }
 
 .clinic-address img {
@@ -35,7 +38,6 @@ footer h5 {
 }
 
 .clinic-location {
-    padding: 25px;
     text-align: center;
 }
 
@@ -45,7 +47,6 @@ footer h5 {
 }
 
 .social-media {
-    padding: 25px;
 }
 
 .social-media ul {
@@ -61,9 +62,15 @@ footer h5 {
 }
 
 @media (max-width: 768px) {
+    .page-footer {
+        grid-row-start: 3;
+        padding: 10px;
+    }
+
     .container-footer {
         grid-template-columns: 1fr;
-        width: 50%;
+        width: 100%;
+        margin: auto;
     }
 
     .clinic-address {
