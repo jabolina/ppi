@@ -13,16 +13,6 @@ class Employee {
     public $employeeCity;
 }
 
-function chooseSex($sex) {
-    $sexs = array(
-        1=>"Homem",
-        2=> "Mulher",
-        3=> "Outro"
-    );
-
-    return $sexs[$sex];
-}
-
 function listEmployees ($conn) {
     $employees = [];
 
@@ -46,8 +36,8 @@ function listEmployees ($conn) {
         throw new Exception("Erro ao executar query: " . $statement->error);
     }
 
-    if (!$statement->bind_result($employeeId, $employeeName, $employeeSex, $employeeRole,
-        $employeeRG, $employeeStreet, $employeeNeigh, $employeeCity)) {
+    if (!$statement->bind_result($employeeId, $employeeName, $employeeSex, $employeeRG,
+        $employeeRole, $employeeStreet, $employeeNeigh, $employeeCity)) {
 
         throw new Exception("Erro ao associar variáveis aos valores: " . $statement->error);
     }
@@ -57,7 +47,7 @@ function listEmployees ($conn) {
 
         $employee->id = $employeeId;
         $employee->employeeName = $employeeName;
-        $employee->employeeSex = chooseSex($employeeSex);
+        $employee->employeeSex = $employeeSex;
         $employee->employeeRole = $employeeRole;
         $employee->employeeRG = $employeeRG;
         $employee->employeeStreet = $employeeStreet;
