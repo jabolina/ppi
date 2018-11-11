@@ -1,4 +1,5 @@
 <?php
+require_once (realpath(dirname(__FILE__)) . "/../../configuration.php");
 
 function loginUser($email, $password, $mysqli) {
     $SQL = "
@@ -22,6 +23,7 @@ function loginUser($email, $password, $mysqli) {
             $_SESSION['user_email'] = $userEmail;
             $_SESSION['user_password'] = $userPassword;
 
+            echo "<script>window.location.href='/'</script>";
             return "Usuário autenticado com sucesso!";
         } else {
             return "Não foi possível se autenticar";

@@ -31,7 +31,6 @@
 <body>
     <div class="wrapper">
         <?php
-
             if (isset($_GET['template'])) {
                 renderLayoutWithContent($_GET['template']);
             } else if (isset($_POST['template'])) {
