@@ -10,12 +10,7 @@ function insertEmployee ($conn) {
     $dataNasc = parseData($_POST['birthday']);
     $genero = parseData($_POST['drone']);
 
-    $cargo = "";
-    if (!empty($_POST['role'])) {
-        foreach ($_POST['role'] as $r) {
-            $cargo = $cargo . parseData($r);
-        }
-    }
+    $cargo = parseData($_POST['role']);
 
     $estadoCivil = "";
     if (!empty($_POST['civil'])) {
@@ -47,7 +42,7 @@ function insertEmployee ($conn) {
         throw new Exception("Falha na prepação do MySQL: " . $conn->error);
     }
 
-    if (!$statement->bind_param("ssisiiss", $nome, $dataNasc, $estadoCivil, $genero, $cargo,
+    if (!$statement->bind_param("ssssssss", $nome, $dataNasc, $estadoCivil, $genero, $cargo,
         $especialidade, $cpf, $rg)) {
         throw new Exception("Falha ao conectar variáveis do MySQL: " . $statement->error);
     }
