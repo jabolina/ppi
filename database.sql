@@ -2,6 +2,7 @@ drop schema if exists VJV_CLINIC;
 create schema if not exists VJV_CLINIC;
 use VJV_CLINIC;
 
+-- we don't know how to generate schema VJV_CLINIC (class Schema) :(
 create table VJV_EMPLOYEES
 (
 	ID int auto_increment,
@@ -66,13 +67,10 @@ alter table VJV_MESSAGES
 create table VJV_SCHEDULES
 (
 	ID int auto_increment,
-	ID_DOCTOR int,
+	ID_DOCTOR int null,
 	DOCTOR_SPECIALTY varchar(40) not null,
 	SCHEDULE_DATE varchar(255) not null,
 	SCHEDULE_TIME varchar(255) not null,
-	PATIENT_NAME varchar(255) not null,
-	PATIENT_EMAIL varchar(255) not null,
-	PATIENT_PHONE varchar(20) not null,
 	constraint VJV_SCHEDULES_ID_uindex
 		unique (ID),
 	constraint VJV_SCHEDULES_ibfk_1
@@ -86,6 +84,20 @@ create index ID_DOCTOR
 
 alter table VJV_SCHEDULES
 	add primary key (ID)
+;
+
+create table VJV_PATIENTS
+(
+	ID int auto_increment,
+	ID_SCHEDULE int not null,
+	PATIENT_NAME varchar(255) not null,
+	PATIENT_EMAIL varchar(255) not null,
+	PATIENT_PHONE varchar(255) not null,
+	constraint VJV_PATIENTS_ID_uindex
+		unique (ID),
+	constraint VJV_PATIENTS_ibfk_1
+		foreign key (ID_SCHEDULE) references VJV_SCHEDULES (ID)
+)
 ;
 
 create table VJV_USERS

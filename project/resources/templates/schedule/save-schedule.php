@@ -5,6 +5,42 @@ require_once (LIBRARY_PATH . "/own/data-management.php");
 
 $errorMessage = "";
 
+function insertPatient ($conn, $scheduleId) {
+    $patientName = parseData($_POST["patient-name"]);
+    $patientPhone = parseData($_POST["patient-phone"]);
+    $patientEmail = parseData($_POST["patient-mail"]);
+
+    if ($patientName == "" || $patientPhone == "" || $patientEmail == "") {
+
+        throw new Exception("Um ou mais campos obrigatórios foram deixados em branco");
+    }
+
+    $sql = "
+        INSERT INTO VJV_PATIENTS (
+        ID, 
+        ID_SCHEDULE, 
+        PATIENT_NAME, 
+        PATIENT_EMAIL, 
+        PATIENT_PHONE) VALUES
+        (null, ?, ?, ?, ?); 
+    ";
+
+    if (!$statement = $conn->prepare($sql)) {
+        throw new Exception("Falha na prepação do MySQL: " . $conn->error);
+    }
+
+    if (!$statement->bind_param("isss", $scheduleId, $patientName, $patientEmail, $patientPhone)) {
+
+        throw new Exception("Falha ao conectar variáveis do MySQL: " . $statement->error);
+    }
+
+    if (!$statement->execute()) {
+        throw new Exception("Erro ao executar inserção no MySQL: " . $statement->error);
+    }
+
+    $statement->close();
+}
+
 function insertSchedule ($conn) {
     $specialty = "0";
     if (!empty($_POST["spec"])) {
@@ -28,12 +64,8 @@ function insertSchedule ($conn) {
     }
 
     $date = $_POST["data"];
-    $patientName = parseData($_POST["patient-name"]);
-    $patientPhone = parseData($_POST["patient-phone"]);
-    $patientEmail = parseData($_POST["patient-mail"]);
 
-    if ($specialty == "0" || $doctorId == -1 || $time == "0" || $date == ""
-        || $patientName == "" || $patientPhone == "" || $patientEmail == "") {
+    if ($specialty == "0" || $doctorId == -1 || $time == "0" || $date == "") {
 
         throw new Exception("Um ou mais campos obrigatórios foram deixados em branco");
     }
@@ -44,19 +76,15 @@ function insertSchedule ($conn) {
             ID_DOCTOR, 
             DOCTOR_SPECIALTY, 
             SCHEDULE_DATE, 
-            SCHEDULE_TIME, 
-            PATIENT_NAME, 
-            PATIENT_EMAIL, 
-            PATIENT_PHONE) VALUES
-            (null, ?, ?, ?, ?, ?, ?, ?); 
+            SCHEDULE_TIME) VALUES
+            (null, ?, ?, ?, ?); 
         ";
 
     if (!$statement = $conn->prepare($sql)) {
         throw new Exception("Falha na prepação do MySQL: " . $conn->error);
     }
 
-    if (!$statement->bind_param("issssss", $doctorId, $specialty, $date, $time,
-        $patientName, $patientEmail, $patientPhone)) {
+    if (!$statement->bind_param("isss", $doctorId, $specialty, $date, $time)) {
 
         throw new Exception("Falha ao conectar variáveis do MySQL: " . $statement->error);
     }
@@ -71,7 +99,10 @@ function insertSchedule ($conn) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $conn = databaseConnect();
+        $conn->begin_transaction();
         insertSchedule($conn);
+        insertPatient($conn, $conn->insert_id);
+        $conn->commit();
     } catch (Exception $e) {
         $errorMessage = $e->getMessage();
     } finally {
