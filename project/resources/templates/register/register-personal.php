@@ -11,7 +11,7 @@
     <div class="row form-group">
         <label for="birthday" class="col-md-2 col-form-label">Nascimento:</label>
         <div class="col-md-9">
-            <input type="date" class="form-control" id="birthday" name="birthday">
+            <input type="date" onchange="verifyBirthday(this.value);" class="form-control" id="birthday" name="birthday">
         </div>
     </div>
 
