@@ -41,16 +41,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-group">
                         <label for="emailLogin">Email</label>
-                        <input type="email" class="form-control" id="emailLogin" name="emailLogin">
+                        <input type="email" placeholder="john@gmail.com" class="form-control" id="emailLogin" name="emailLogin">
                     </div>
 
                     <div class="form-group">
                         <label for="passLogin">Senha</label>
-                        <input type="password" class="form-control" id="passLogin" name="passLogin">
+                        <input type="password" placeholder="senha" class="form-control" id="passLogin" name="passLogin">
                     </div>
-
-                    <input type="submit" style="width: 92%" class="btn btn-green btn-block" value="Login">
-                    <input type="reset" style="width: 92%" class="btn btn-orange btn-block" data-dismiss="modal" value="Fechar">
+                    <input type="submit" class="btn btn-green btn-block no-margin" value="Login">
+                    <input type="reset" class="btn btn-orange btn-block no-margin" data-dismiss="modal" value="Fechar">
                 </form>
             </div>
         </div>
