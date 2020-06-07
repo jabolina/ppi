@@ -32,7 +32,7 @@ try {
                     Home
                 </a>
 
-                <a href="index.php?template=scheduling.php" class="dropdown-item">
+                <a href="index.php?template=schedule/scheduling.php" class="dropdown-item">
                     <i class="fas fa-file-signature"></i>
                     Agendamento
                 </a>

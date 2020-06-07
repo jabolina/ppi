@@ -4,7 +4,7 @@
     <div class="row form-group">
         <label for="cep" class="col-md-2 col-form-label">CEP:</label>
         <div class="col-md-9">
-            <input type="number" class="form-control" id="cep" name="cep">
+            <input type="text" maxlength="8" class="form-control" id="cep" name="cep">
         </div>
     </div>
 
@@ -12,15 +12,15 @@
         <div class="col-md-2">Tipo:</div>
         <div class="col-md-9">
             <div class="form-check">
-                <input class="form-check-input" name="streetType" type="checkbox" id="street">
+                <input class="form-check-input" name="streetType[]" type="checkbox" id="street">
                 <label class="form-check-label" for="street">Rua</label>
 
                 <br>
-                <input class="form-check-input" name="streetType" type="checkbox" id="avenue">
+                <input class="form-check-input" name="streetType[]" type="checkbox" id="avenue">
                 <label class="form-check-label" for="avenue">Avenida</label>
 
                 <br>
-                <input class="form-check-input" name="streetType" type="checkbox" id="praca">
+                <input class="form-check-input" name="streetType[]" type="checkbox" id="praca">
                 <label class="form-check-label" for="praca">Praça</label>
             </div>
         </div>

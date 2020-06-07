@@ -21,7 +21,7 @@ try {
         </li>
 
         <li>
-            <a href="index.php?template=scheduling.php">
+            <a href="index.php?template=schedule/scheduling.php">
                 <i class="fas fa-file-signature"></i>
                 Agendamento
             </a>

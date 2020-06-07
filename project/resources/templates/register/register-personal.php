@@ -11,7 +11,7 @@
     <div class="row form-group">
         <label for="birthday" class="col-md-2 col-form-label">Nascimento:</label>
         <div class="col-md-9">
-            <input type="date" class="form-control" id="birthday" name="birthday">
+            <input type="date" onchange="verifyBirthday(this.value);" class="form-control" id="birthday" name="birthday">
         </div>
     </div>
 
@@ -19,11 +19,11 @@
         <label class="col-md-2 col-form-label" for="civil">Estado civil:</label>
         <div class="col-md-9 register-select">
             <select class="form-control" id="civil" name="civil[]">
-                <option class=" form-control" name="civil[]" value="1">Solteiro(a)</option>
-                <option class=" form-control" name="civil[]" value="2">Casado(a)</option>
-                <option class=" form-control" name="civil[]" value="3">Divorciado(a)</option>
-                <option class=" form-control" name="civil[]" value="4">Viúvo(a)</option>
-                <option class=" form-control" name="civil[]" value="5">Separado(a)</option>
+                <option class=" form-control" name="civil[]" value="Solteiro(a)">Solteiro(a)</option>
+                <option class=" form-control" name="civil[]" value="Casado(a)">Casado(a)</option>
+                <option class=" form-control" name="civil[]" value="Divorciado(a)">Divorciado(a)</option>
+                <option class=" form-control" name="civil[]" value="Viúvo(a)">Viúvo(a)</option>
+                <option class=" form-control" name="civil[]" value="Separado(a)">Separado(a)</option>
             </select>
         </div>
     </div>
@@ -33,17 +33,17 @@
             <legend class="col-form-label col-md-2 pt-0">Sexo:</legend>
             <div class="col-md-9">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="man" name="drone" value="1" />
+                    <input class="form-check-input" type="radio" id="man" name="drone" value="Homem" />
                     <label for="man">Homem</label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="woman" name="drone" value="2" />
+                    <input class="form-check-input" type="radio" id="woman" name="drone" value="Mulher" />
                     <label for="woman">Mulher</label>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" id="otherSex" name="drone" value="3" checked />
+                    <input class="form-check-input" type="radio" id="otherSex" name="drone" value="Outro" checked />
                     <label for="otherSex">Outro</label>
                 </div>
             </div>
@@ -53,26 +53,26 @@
     <div class="form-group row">
         <label class="col-md-2 col-form-label">Cargo:</label>
         <div class="col-md-9">
-            <div class="form-check">
-                <input class="form-check-input" name="role[]" type="checkbox" id="medic" onchange="displaySpecialty(this);">
+            <div id="employee-role" class="form-check">
+                <input class="form-check-input" value="Medico" name="role" type="radio" id="medic" onchange="displaySpecialty(this)">
                 <label class="form-check-label" for="medic">
                     Médico(a)
                 </label>
 
                 <br>
-                <input class="form-check-input" name="role[]" type="checkbox" id="nurse">
+                <input class="form-check-input" value="Enfermeiro(a)" name="role" type="radio" id="nurse">
                 <label class="form-check-label" for="nurse">
                     Enfermeiro(a)
                 </label>
 
                 <br>
-                <input class="form-check-input" name="role[]" type="checkbox" id="secretary">
+                <input class="form-check-input" value="Secretário(a)" name="role" type="radio" id="secretary">
                 <label class="form-check-label" for="secretary">
                     Secretário(a)
                 </label>
 
                 <br>
-                <input class="form-check-input" name="role[]" type="checkbox" id="otherJob">
+                <input class="form-check-input" value="Outro" name="role" type="radio" id="otherJob" checked>
                 <label class="form-check-label" for="otherJob">
                     Outro
                 </label>
@@ -81,9 +81,9 @@
     </div>
 
     <div id="doctorSpecialty" class="row form-group" style="display: none;">
-        <label for="area" class="col-md-2 col-form-label">Especialidade:</label>
+        <label for="specialty" class="col-md-2 col-form-label">Especialidade:</label>
         <div class="col-md-9">
-            <input type="text" class="form-control" id="area" name="specialty">
+            <input type="text" class="form-control" id="specialty" name="specialty">
         </div>
     </div>
 </div>

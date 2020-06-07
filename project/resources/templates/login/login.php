@@ -48,11 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label for="passLogin">Senha</label>
                         <input type="password" placeholder="senha" class="form-control" id="passLogin" name="passLogin">
                     </div>
-
                     <input type="submit" class="btn btn-green btn-block no-margin" value="Login">
-
                     <input type="reset" class="btn btn-orange btn-block no-margin" data-dismiss="modal" value="Fechar">
-
                 </form>
             </div>
         </div>
